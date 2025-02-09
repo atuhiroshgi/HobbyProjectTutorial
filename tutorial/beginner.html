@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unityチュートリアル</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/tutorial.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <a href="../index.html" class="back-btn">戻る</a>
+    <div class="tutorial-content">
+        <h1>Unity初級チュートリアル - 爆弾ゲーム</h1>
+        <section>
+            <h2>目次</h2>
+            <ul class="table-of-contents">
+                <li><a href="#section1">1. プロジェクトの作成</a></li>
+                <li><a href="#section2">2. Unityの画面の説明, 作る準備</a></li>
+                <li><a href="#section3">3. オブジェクトの配置</a></li>
+                <li><a href="#section4">4. スクリプトの作成</a></li>
+                <li><a href="#section5">5. UIの作成</a></li>
+                <li><a href="#section6">6. オブジェクトへのアタッチと実行</a></li>
+                <li><a href="#section7">7.コードの解説</a></li>
+            </ul>
+        </section>
+        <section id="section1">
+
+
+            <h2>1. プロジェクトの作成</h2>
+
+            
+            <img src="../image/01.png" alt="プロジェクトリスト画面">
+            <p>右上の「新しいプロジェクト」ボタンをクリックする</p><br />
+            
+            <img src="../image/02.png" alt="プロジェクト作成画面">
+            <p>Universal2Dをクリック→プロジェクト名にClickGameと入力→保存場所を選ぶ→プロジェクトを作成をクリック</p><br />
+            <p>この操作はプロジェクトを新しく作るたびに行うので覚えると〇</p>
+        </section>
+        <section id="section2">
+            <h2>2. Unityの画面の説明, 作る準備</h2>
+            
+            <img src="../image/03.png" alt="Unityの画面">
+            <p class="window-description">①ヒエラルキーウィンドウ：ゲーム内で使うカメラやオブジェクトなどが表示されているウィンドウ。つまり、ゲームの中にあるさまざまなパーツや要素を見やすく整理するためのもの。</p>
+            <p class="window-description">②シーンビュー:ゲームの実際の画面を表示するウィンドウ。ゲームを作るためのパーツを配置したり、パーツを移動, 回転, 拡大したり、ゲームの中身を確認するためのもの。</p>
+            <p class="window-description">③ゲームビュー:ゲームのカメラ視点で画面を確認するためのウィンドウ。実際に実行してゲームの動作を確認するだけでなく、UIを配置する時にも役立ちます。</p>
+            <p class="window-description">④プロジェクトウィンドウ：ゲームに使う素材やパーツを管理するウィンドウ。</p>
+            <p class="window-description">⑤インスペクターウィンドウ：ゲームのパーツの情報を編集するためのウィンドウ。パーツの位置、角度、大きさを数字で具体的に設定したり、パーツの色を変えたり、オブジェクトの動きを設定することができます。</p>
+            <p class="window-description">⑥実行, 一時停止ボタン：ゲームを実際に実行するためのボタン、一時停止ボタンで実行中に一時停止ができます。</p><br />
+            
+            <img src="../image/04.png" alt="Unityの画面をFullHDにする">
+            <p>FreeAspectをクリック→FullHD(1920×1080)を選択<br />基本的にPCの画面は1920×1080の解像度が多いので、これを選択するとゲームの画面がきれいに表示されることが多いです。</p><br />
+            
+            <img src="../image/05.png" alt="Sceneの名前を変える">
+            <p>プロジェクトウィンドウでScenesフォルダをクリック→Sceneを右クリック→名前を変更→名前をGameに変更</p>
+            <p>シーンとはヒエラルキー、シーン、ゲームウィンドウをまとめたものでシーンを切り替えることでタイトル→ゲーム画面やゲームオーバー画面→タイトルなどを再現できます。</p><br />
+ 
+            <img src="../image/06.png" alt="フォルダを作る">
+            <img src="../image/07.png" alt="名前変更後">
+            <p>プロジェクトウィンドウで右クリック→Create→Folderをクリック→名前をScriptsに変更</p><br />
+        </section>
+
+        <section id="section3">
+            <h2>3. オブジェクトの配置</h2>
+
+            <img src="../image/08.png" alt="パーツの配置">
+            <p>ヒエラルキーウィンドウで右クリック→2D Object→Sprites→Squareの順にクリック</p>
+            <p>真ん中に白い四角形が配置されればOKです。</p><br />
+            
+            <img src="../image/09.png" alt="操作バー">
+            <p>シーンビューの左上に上の画像のようなバーが出てきたと思います。<br />これはマウスの操作で何をするかを表します。上から順に</p>
+            <p class="tool-description">・シーンビューを移動: ドラッグするとシーンビューを移動できるようになります。</p>
+            <p class="tool-description">・オブジェクトの移動: ヒエラルキーウィンドウで選んだオブジェクトに矢印が出て、それをドラッグすることでオブジェクトの位置を移動できます。</p>
+            <p class="tool-description">・オブジェクトの回転: ヒエラルキーウィンドウで選んだオブジェクトに丸い円が出て、それをドラッグすることでオブジェクトを回転できます。</p>
+            <p class="tool-description">・オブジェクトの拡大縮小: ヒエラルキーウィンドウで選んだオブジェクトに四角いボックスが出て、それをドラッグすることでオブジェクトを拡大縮小できます。</p>
+            <p class="tool-description">・オブジェクトの移動と拡大縮小: ヒエラルキーウィンドウで選んだオブジェクトに四角いボックスが出て、上の2つを同時に行うことができます。</p>
+            <p class="tool-description">・万能: 上の全てができるようになります。間違えて違う操作をする可能性があるので使わないことが多いです。</p><br />
+            
+            <img src="../image/10.png" alt="インスペクターの操作">
+            <p class="tool-description">①座標: オブジェクトの位置を表す数字。左から順にx, y, zの座標が表示されていてこれを変えることでオブジェクトを正確な位置に配置できます。</p>
+            <p class="tool-description">②向き: オブジェクトの向きを表す数字。左から順にx, y, zの向きが表示されていてこれを変えることでオブジェクトを正確な向きに配置できます。</p>
+            <p class="tool-description">③大きさ: オブジェクトの大きさを表す数字。左から順にx, y, zの大きさが表示されていてこれを変えることでオブジェクトを正確な大きさに変えることができます。</p>
+            <p class="tool-description">④形と色: オブジェクトの形と色を変えることができます。Spriteに入っている画像が形、Colorの右のウィンドウが色です。</p><br />
+            <p>操作に慣れるまで好きな位置に色んな形のオブジェクトを置いてみてください</p>
+        </section>
+
+        <section id="section4">
+            <h2>4. スクリプトの作成</h2>
+            <p>とうとう初めてのプログラミングです。最初は分からなくて当然だし、プログラミングに難しい印象を持つかもしれませんが、写したり自分で考えて何度も試行錯誤しているうちにちょっとずつ分かってくるので頑張っていきましょう！</p><br />
+            
+            <p>プロジェクトウィンドウでScriptsを開いて右クリック→Create→MonobehaviourScriptをクリック→名前をBombに変更 の順に沿ってスクリプトを作成してください。</p>
+            <img src="../image/11.png" alt="スクリプトの作成"><br />
+            <img src="../image/12.png" alt="Targetスクリプトも作成"><br />
+
+            <p>まずはGameManagerスクリプトをダブルクリックして開いてみましょう</p>
+            <img src="../image/13.png" alt="GameManagerスクリプト">
+            <p>VisualStudioが開いて図のようなコードが書いてあればOKです。</p><br />
+            <p>確認出来たら、書いてあるコードを全て消して、以下のコードを書いてください。コピーもできます。</p>
+
+<!--コードブロック-->
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">コピー</button>
+                <pre><code data-code='using UnityEngine;
+using UnityEngine.UI;
+
+public class Bomb : MonoBehaviour
+{
+    [SerializeField, Header("「You Lose!」を表示するテキストボックス")]
+    private Text resultText;
+    private bool isFailed = false; // はずれなら true
+    private bool gameEnded = false; // 一度負けたら他のクリックを無効化
+
+    private void OnMouseDown()
+    {
+        if (gameEnded) return; // ゲームが終わっていたら何もしない
+
+        if (isFailed)
+        {
+            gameEnded = true;
+            resultText.text = "You Lose!"; // 負けメッセージを表示
+        }
+        else
+        {
+            Destroy(this.gameObject); // クリックされたらオブジェクトを消す
+        }
+    }
+}'><span class="line-numbers">1</span>using UnityEngine;
+<span class="line-numbers">2</span>using UnityEngine.UI;
+<span class="line-numbers">3</span>
+<span class="line-numbers">4</span>public class Bomb : MonoBehaviour
+<span class="line-numbers">5</span>{
+<span class="line-numbers">6</span>    [SerializeField, Header("「You Lose!」を表示するテキストボックス")]
+<span class="line-numbers">7</span>    private Text resultText;
+<span class="line-numbers">8</span>    private bool isFailed = false; // はずれなら true
+<span class="line-numbers">9</span>    private bool gameEnded = false; // 一度負けたら他のクリックを無効化
+<span class="line-numbers">10</span>
+<span class="line-numbers">11</span>    private void OnMouseDown()
+<span class="line-numbers">12</span>    {
+<span class="line-numbers">13</span>        if (gameEnded) return; // ゲームが終わっていたら何もしない
+<span class="line-numbers">14</span>
+<span class="line-numbers">15</span>        if (isFailed)
+<span class="line-numbers">16</span>        {
+<span class="line-numbers">17</span>            gameEnded = true;
+<span class="line-numbers">18</span>            resultText.text = "You Lose!"; // 負けメッセージを表示
+<span class="line-numbers">19</span>        }
+<span class="line-numbers">20</span>        else
+<span class="line-numbers">21</span>        {
+<span class="line-numbers">22</span>            Destroy(this.gameObject); // クリックされたらオブジェクトを消す
+<span class="line-numbers">23</span>        }
+<span class="line-numbers">24</span>    }
+<span class="line-numbers">25</span>}</code></pre>
+            </div>
+            <script src="../js/codeBlock.js"></script>
+            <br />
+
+<!--ここまでコードブロック-->
+
+        <p>下図のようになればOKです。</p>
+        <img src="../image/14.png" alt="Bombクラス(記述後)"><br />
+
+        <p>初めてのプログラミングは以上です！いかがでしたか？最後に解説もしているので見てくださいね！</p>
+        </section>
+
+        <section id="section5">
+            <h2>5. UIの作成</h2>
+            <p>UIとは?と思った人はホームに戻ってUnity辞典を確認してください。</p><br />
+
+            <p>まずはTextオブジェクトを作ります。</p>
+            <img src="../image/15.png" alt="Textオブジェクトの作成">
+            <p>ヒエラルキーウィンドウで右クリック→UI→Legacy→Textの順にクリック<br />作ったTextオブジェクトの名前はLoseMessageにしてください。</p><br />
+            
+            <p>次にTextオブジェクトを選択してインスペクターウィンドウの中にある「New Text」の文字を消し、座標を(0, 0, 0)にしてください</p>
+            <img src="../image/16.png" alt="Textを空にする">
+            <img src="../image/17.png" alt="座標を0, 0, 0にする"><br />
+        </section>
+
+        <section id="section6">
+            <h2>6. オブジェクトへのアタッチと実行</h2>
+            <p>まずは最初に作った四角形をクリックしてインスペクターウィンドウのAddComponentをクリック。<br />でてきたウィンドウで「BoxCollider2D」と検索し、でてきたBoxCollider2Dを選択してください。</p>
+            <img src="../image/18.png" alt="BoxCollider2Dの選択">
+            <p class="warning"><i class="fas fa-exclamation-triangle"></i> 2Dが付いていないBoxColliderを間違えて選択していないか確認してください。</p>
+            <small>この資料を作っている私はかつてこのミスを見つけるのに1ヶ月くらいかかって地獄を見たことがあります。</small><br /><br />
+            
+            <p>下図のようになればOKです。</p>
+            <img src="../image/19.png" alt="BoxCollider2Dがアタッチできているかの確認"><br />
+
+            <p>Colliderとは当たり判定のことで、オブジェクトにColliderをつけることで緑の枠の範囲に当たり判定を作ることができます。</p>
+            <img src="../image/20.png" alt="Colliderの確認"><br />
+
+            <p>次にBombスクリプトをAddComponentに向かってドラッグアンドドロップしてください。</p>
+            <img src="../image/21.png" alt="Bombスクリプトのアタッチ">
+            <p>図のようになればOKです。</p>
+
+            <p id="attach-textUI">最後に、LoseMessageオブジェクトをアタッチされているBombクラスのResultTextに向かってドラッグアンドドロップしてください。</p>
+            <img src="../image/22.png" alt="LoseMessageのアタッチ">
+            <p>図のようになればOKです。</p><br />
+
+            <p id="attach-all">この作業をSceneビューに配置した全てのオブジェクトに行ってください。</p>
+            <img src="../image/23.png" alt="全てのオブジェクトのアタッチ"><br />
+
+            <p>作業が終わったらオブジェクトの中から1つだけはずれを設定しましょう。はずれにしたい爆弾のisFailedにチェックを付けてください。</p>
+            <img src="../image/24.png" alt="はずれの設定">
+            <p>図のようになればOKです。</p><br />
+
+            <p>おめでとうございます！完成です！ゲームを実行してみましょう！</p>
+            <img src="../image/25.png" alt="ゲームの実行">
+            <p>もし上手くいかなかったら先輩に遠慮なく聞いてください！</p>
+        </section>
+
+        <section id="section7">
+            <h2>7.コードの解説</h2>
+            <p>何言ってるか分からなくても、そうなんだー程度に聞いといてくれたらプログラミング上手くなります！</p><br />
+            
+            <p>プログラミングを読むにはものすごい量の知識が必要だと思われがちですが、実はプログラミングを読めるようになる近道は読み方のコツを覚えることです。</p><br />
+            <p>例えば、プログラミングは括弧ごとで塊になっていて、プログラマーには塊で見えています。つまりさっきのコードで言うと、</p>
+            <img src="../image/26.png" alt="括弧ごとで塊になっている">
+
+            <p>こう見えているわけです。これはプログラミングをスムーズに読むコツです。</p><br />
+
+            <p>また、こう書け！と決められている部分とコーディングした人が自由に決められる部分があります。</p>
+            <img src="../image/27.png" alt="命名できる部分" id="naming">
+            <p>図の囲われている部分は命名できるので、自分が見て何をしているのか分かりやすく名前を付けるのもコツの1つと言えるでしょう。</p><br />
+
+            <p>この2つが出来たらプログラミングは半分読めたようなものです。ここからはコードを詳しく読んでみましょう。</p><br />
+
+            <div class="code-explanation">
+                <img src="../image/28.png" alt="ライブラリ">
+                <p>このusing～はライブラリと言って、Unityの機能をC#で使うときに必要なものです。最初はおまじないみたいなものだと思っといてください。</p>
+            </div>
+            <br />
+
+            <div class="code-explanation">
+                <img src="../image/29.png" alt="クラス名と継承">
+                <p>publicというのはまた次の章で勉強することになるので、今回はclass(クラス)とは何かを覚えてください。</p><br />
+                <p>クラスとは簡単に言えば<span id="highlight-red">設計図</span>です。先ほど<a href="#attach-all">「6.アタッチと実行」</a>でBombクラスのスクリプトをいっぱいアタッチしたと思います。</p>
+                <p>それは、「クリックされたら消える、はずれならゲームオーバー」という設計図をもとにオブジェクトを作ったということになるわけです。</p>
+
+                <p>つまり、みなさんが書いたこのスクリプトはBomb(爆弾)の設計図だったわけです。</p>
+                <p>そして、「:MonoBehaviour」というのは、このスクリプトはMonoBehaviourというクラスを継承しているということですが、継承がかなり難しい概念なので今はおまじないだと思ってもらって大丈夫です。<small>応用編でちょっとだけ話すかも</small></p>
+            </div>
+            <br />
+
+            <div class="code-explanation">
+                <img src="../image/30.png" alt="変数">
+                <p>これらは変数を定義しています。変数というのは<span id="highlight-red">設計図の中のパラメータを表す部分</span>です。</p>
+                <p>例えば、マリオというクラスがあったとしたら、身長、体重、体の色、耳の有無などの変数が考えられるでしょう。</p>
+                <p>今回は爆弾クラスなので本来はサイズや色、爆発の範囲などの変数があると思いますが、今回のゲームには関係ない変数なので書かずに、ゲームに必要な要素である「爆発するかどうか(isFailed)」、「ゲームが終わっているかどうか(gameEnded)」という変数を用意すればいいということです。</p><br />
+                
+                <img src="../image/31.png" alt="変数の定義">
+                <p>図のように3つの要素の組み合わせで変数を定義します。コードを見たら分かるように、一度定義したら2回目以降は名前だけで使います。</p><br />
+                <p>前述の通りアクセス修飾子は中級で解説するので、今回は型の例を見てみましょう:</p>
+                <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                    <th style="border: 2px solid #ddd; padding: 8px; text-align: left;">型</th>
+                    <th style="border: 2px solid #ddd; padding: 8px; text-align: left;">説明</th>
+                    <th style="border: 2px solid #ddd; padding: 8px; text-align: left;">例</th>
+                </tr>
+                <tr>
+                    <td style="border: 2px solid #ddd; padding: 8px;">int</td>
+                    <td style="border: 2px solid #ddd; padding: 8px;">整数を使うときの型</td>
+                    <td style="border: 2px solid #ddd; padding: 8px;">private int rank = 10;</td>
+                </tr>
+                <tr>
+
+                    <td style="border: 2px solid #ddd; padding: 8px;">float</td>
+                    <td style="border: 2px solid #ddd; padding: 8px;">小数を表す</td>
+                    <td style="border: 2px solid #ddd; padding: 8px;">protected float height = 170.5;</td>
+                </tr>
+                <tr>
+                    <td style="border: 2px solid #ddd; padding: 8px;">string</td>
+                    <td style="border: 2px solid #ddd; padding: 8px;">文字列を表す</td>
+                    <td style="border: 2px solid #ddd; padding: 8px;">public string name = "爆弾くん";</td>
+                </tr>
+                <tr style="background-color: #f5f5f5;">
+                    <tr>
+
+                        <td style="border: 2px solid #ddd; padding: 8px;">bool</td>
+                        <td style="border: 2px solid #ddd; padding: 8px;">true/falseの2つの値を持つ</td>
+                        <td style="border: 2px solid #ddd; padding: 8px;">private bool isDead = false;</td>
+                    </tr>
+                </table>
+
+                <p>Text resultText;だけ型の色が緑色になっていますね。これは「爆弾くん」が「Textオブジェクトくん」と仲良くなるのに必要なのです。例えば、学食でご飯を食べていて、初対面の人に突然「1口ちょうだい！」と言われてあげますか？よっぽど心が大きい人じゃない限りあげないと思います。それはTextオブジェクトくんも同じで、仲良くないと「You Lose!」と表示しろと要求されても表示したくないのです。</p><br />
+                <p>つまり、Text resultText;というのは爆弾くんからTextオブジェクトくんに向けた仲良くなろうアピールで、<a href="#attach-textUI">「6.アタッチと実行」</a>でTextオブジェクトくんがアンサーを返して初めて仲良くなるのです。そしてSerializeFieldはTextオブジェクトくんがアンサーを返せるようにするための呪文です。</p>
+            </div>
+            <br />
+            <div class="code-explanation">
+                <img src="../image/32.png" alt="関数">
+                <p>これは関数を定義しています。関数とは、<span id="highlight-red">機能や動作</span>です。</p>
+                <p>例えば、猫型ロボットというクラスがあったとしたら、「秘密道具を出す」、「どら焼きを食べる」、「押し入れで寝る」などの関数が考えられるでしょう。ちなみに今回のOnMouseDown()は組み込み関数です。</p>
+            </div>
+        </section>
+    </div>
+</body>
+
+
+</html> 
