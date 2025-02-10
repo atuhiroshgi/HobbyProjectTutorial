@@ -1,33 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
     // モーダル要素の取得
     const aboutModal = document.getElementById('about-modal');
-    
-    // ボタン要素の取得
-    const aboutBtn = document.querySelector('.about-btn');
-    const closeBtns = document.querySelectorAll('.close-btn');
+    const contactModal = document.getElementById('contact-modal');
+    const closeButtons = document.querySelectorAll('.close-btn');
 
-    // モーダルを閉じる関数
-    function closeModals() {
-        aboutModal.classList.remove('show');
-        document.body.style.overflow = '';
-    }
-
-    // Aboutモーダルを開く
-    aboutBtn.addEventListener('click', function(e) {
+    // Aboutボタンのクリックイベント
+    document.querySelector('.about-btn').addEventListener('click', function(e) {
         e.preventDefault();
-        aboutModal.classList.add('show');
-        document.body.style.overflow = 'hidden';
+        aboutModal.style.display = 'block';
     });
 
-    // 閉じるボタンの処理
-    closeBtns.forEach(btn => {
-        btn.addEventListener('click', closeModals);
+    // お問い合わせボタンのクリックイベント
+    document.querySelector('.contact-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        contactModal.style.display = 'block';
+    });
+
+    // 閉じるボタンのクリックイベント
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            aboutModal.style.display = 'none';
+            contactModal.style.display = 'none';
+        });
     });
 
     // モーダル外クリックで閉じる
     window.addEventListener('click', function(e) {
-        if (e.target.classList.contains('modal')) {
-            closeModals();
+        if (e.target == aboutModal) {
+            aboutModal.style.display = 'none';
+        }
+        if (e.target == contactModal) {
+            contactModal.style.display = 'none';
         }
     });
 }); 

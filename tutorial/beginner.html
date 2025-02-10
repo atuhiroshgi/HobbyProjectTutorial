@@ -198,7 +198,7 @@ public class Bomb : MonoBehaviour
             <p id="attach-all">この作業をSceneビューに配置した全てのオブジェクトに行ってください。</p>
             <img src="../image/23.png" alt="全てのオブジェクトのアタッチ"><br />
 
-            <p>作業が終わったらオブジェクトの中から1つだけはずれを設定しましょう。はずれにしたい爆弾のisFailedにチェックを付けてください。</p>
+            <p id="setting-failed">作業が終わったらオブジェクトの中から1つだけはずれを設定しましょう。はずれにしたい爆弾のisFailedにチェックを付けてください。</p>
             <img src="../image/24.png" alt="はずれの設定">
             <p>図のようになればOKです。</p><br />
 
@@ -209,9 +209,11 @@ public class Bomb : MonoBehaviour
 
         <section id="section7">
             <h2>7.コードの解説</h2>
-            <p>何言ってるか分からなくても、そうなんだー程度に聞いといてくれたらプログラミング上手くなります！</p><br />
+            <p>初めてプログラミングを読む人からしたら難しくて何言ってるか分からないと思いますが、プログラミング能力はプログラムを読んだだけ上がります。一度目を通すだけでもお願いします！</p>
+            <p class="warning"><i class="fas fa-exclamation-triangle"></i> 今からの解説を完全に理解する必要はありません。薄く、広く、ざっくり覚えながら「あっそ、ふーん」くらいの気分で見てくれたら大丈夫です。</p>
+            <br />
             
-            <p>プログラミングを読むにはものすごい量の知識が必要だと思われがちですが、実はプログラミングを読めるようになる近道は読み方のコツを覚えることです。</p><br />
+            <p>さて、プログラミングを読むにはものすごい量の知識が必要だと思われがちですが、実はプログラミングを読めるようになる近道は読み方のコツを覚えることです。</p><br />
             <p>例えば、プログラミングは括弧ごとで塊になっていて、プログラマーには塊で見えています。つまりさっきのコードで言うと、</p>
             <img src="../image/26.png" alt="括弧ごとで塊になっている">
 
@@ -225,30 +227,34 @@ public class Bomb : MonoBehaviour
 
             <div class="code-explanation">
                 <img src="../image/28.png" alt="ライブラリ">
+                <h2>ライブラリ</h2>
                 <p>このusing～はライブラリと言って、Unityの機能をC#で使うときに必要なものです。最初はおまじないみたいなものだと思っといてください。</p>
             </div>
             <br />
 
             <div class="code-explanation">
                 <img src="../image/29.png" alt="クラス名と継承">
-                <p>publicというのはまた次の章で勉強することになるので、今回はclass(クラス)とは何かを覚えてください。</p><br />
+                <h2>クラス</h2>
+                <p>publicというのは「アクセス修飾子」といって、詳しくは上級で勉強することになるので、今回はclass(クラス)とは何かを覚えてください。</p><br />
                 <p>クラスとは簡単に言えば<span id="highlight-red">設計図</span>です。先ほど<a href="#attach-all">「6.アタッチと実行」</a>でBombクラスのスクリプトをいっぱいアタッチしたと思います。</p>
-                <p>それは、「クリックされたら消える、はずれならゲームオーバー」という設計図をもとにオブジェクトを作ったということになるわけです。</p>
-
+                <p>それは、「クリックされたら消える、はずれならゲームオーバー」という設計図をもとにオブジェクトを作っていたんです。</p>
                 <p>つまり、みなさんが書いたこのスクリプトはBomb(爆弾)の設計図だったわけです。</p>
-                <p>そして、「:MonoBehaviour」というのは、このスクリプトはMonoBehaviourというクラスを継承しているということですが、継承がかなり難しい概念なので今はおまじないだと思ってもらって大丈夫です。<small>応用編でちょっとだけ話すかも</small></p>
+                <p>このように、Unityのプログラミングでは<a id="highlight-red">設計図(クラス)をもとに色んな機能を持ったオブジェクトを作る</a>ことを繰り返していくのが基本的な考え方になります。</p><br />
+
+                <p>そして、「:MonoBehaviour」というのは、「このクラスはMonoBehaviourというクラスを継承しているという」のを表しているのですが、継承がかなり難しい概念で2年生が学ぶような内容なので、今はおまじないだと思ってもらって大丈夫です。<small>応用編でちょっとだけ話すかも</small></p>
+
             </div>
             <br />
 
             <div class="code-explanation">
                 <img src="../image/30.png" alt="変数">
-                <p>これらは変数を定義しています。変数というのは<span id="highlight-red">設計図の中のパラメータを表す部分</span>です。</p>
-                <p>例えば、マリオというクラスがあったとしたら、身長、体重、体の色、耳の有無などの変数が考えられるでしょう。</p>
-                <p>今回は爆弾クラスなので本来はサイズや色、爆発の範囲などの変数があると思いますが、今回のゲームには関係ない変数なので書かずに、ゲームに必要な要素である「爆発するかどうか(isFailed)」、「ゲームが終わっているかどうか(gameEnded)」という変数を用意すればいいということです。</p><br />
-                
+                <h2>変数</h2>
+                <p>上図の部分ではクラスに必要な変数を定義しています。変数というのは<span id="highlight-red">設計図の中のパラメータを表す部分</span>です。</p>
+                <p>例えば、マリオというクラスがあったとしたら、ジャンプの高さ、残り何機あるのか、今マリオは何マリオなのか、などの変数が考えられるでしょう。</p><br />                
+
                 <img src="../image/31.png" alt="変数の定義">
                 <p>図のように3つの要素の組み合わせで変数を定義します。コードを見たら分かるように、一度定義したら2回目以降は名前だけで使います。</p><br />
-                <p>前述の通りアクセス修飾子は中級で解説するので、今回は型の例を見てみましょう:</p>
+                <p>前述の通りアクセス修飾子は上級で解説するので、今回は型の例を見てみましょう:</p>
                 <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
                     <th style="border: 2px solid #ddd; padding: 8px; text-align: left;">型</th>
                     <th style="border: 2px solid #ddd; padding: 8px; text-align: left;">説明</th>
@@ -257,40 +263,116 @@ public class Bomb : MonoBehaviour
                 <tr>
                     <td style="border: 2px solid #ddd; padding: 8px;">int</td>
                     <td style="border: 2px solid #ddd; padding: 8px;">整数を使うときの型</td>
-                    <td style="border: 2px solid #ddd; padding: 8px;">private int rank = 10;</td>
+                    <td style="border: 2px solid #ddd; padding: 8px;">int rank = 10;</td>
                 </tr>
                 <tr>
 
                     <td style="border: 2px solid #ddd; padding: 8px;">float</td>
-                    <td style="border: 2px solid #ddd; padding: 8px;">小数を表す</td>
-                    <td style="border: 2px solid #ddd; padding: 8px;">protected float height = 170.5;</td>
+                    <td style="border: 2px solid #ddd; padding: 8px;">小数を使うときの型</td>
+                    <td style="border: 2px solid #ddd; padding: 8px;">float height = 170.5;</td>
                 </tr>
                 <tr>
                     <td style="border: 2px solid #ddd; padding: 8px;">string</td>
-                    <td style="border: 2px solid #ddd; padding: 8px;">文字列を表す</td>
-                    <td style="border: 2px solid #ddd; padding: 8px;">public string name = "爆弾くん";</td>
+                    <td style="border: 2px solid #ddd; padding: 8px;">文字列を使うときの型</td>
+                    <td style="border: 2px solid #ddd; padding: 8px;">string name = "爆弾くん";</td>
                 </tr>
                 <tr style="background-color: #f5f5f5;">
                     <tr>
-
                         <td style="border: 2px solid #ddd; padding: 8px;">bool</td>
-                        <td style="border: 2px solid #ddd; padding: 8px;">true/falseの2つの値を持つ</td>
-                        <td style="border: 2px solid #ddd; padding: 8px;">private bool isDead = false;</td>
+                        <td style="border: 2px solid #ddd; padding: 8px;">trueとfalseの2つしか設定できない、真偽値を使うときの型</td>
+                        <td style="border: 2px solid #ddd; padding: 8px;">bool isDead = false;</td>
                     </tr>
                 </table>
+                <p>ここで挙げている型はほんの1部で型は数えきれないほど存在しています。</p><br />
 
-                <p>Text resultText;だけ型の色が緑色になっていますね。これは「爆弾くん」が「Textオブジェクトくん」と仲良くなるのに必要なのです。例えば、学食でご飯を食べていて、初対面の人に突然「1口ちょうだい！」と言われてあげますか？よっぽど心が大きい人じゃない限りあげないと思います。それはTextオブジェクトくんも同じで、仲良くないと「You Lose!」と表示しろと要求されても表示したくないのです。</p><br />
+                <p>また、コードを見るとText resultText;だけ型の色が緑色になっていますね。これは「爆弾くん」が「Textオブジェクトくん」と仲良くなるのに必要なのです。例えば、学食でご飯を食べていて、初対面の人に突然「1口ちょうだい！」と言われてあげますか？よっぽど心が大きい人じゃない限りあげないと思います。それはTextオブジェクトくんも同じで、仲良くないと「You Lose!」と表示しろと要求されても表示したくないのです。</p><br />
                 <p>つまり、Text resultText;というのは爆弾くんからTextオブジェクトくんに向けた仲良くなろうアピールで、<a href="#attach-textUI">「6.アタッチと実行」</a>でTextオブジェクトくんがアンサーを返して初めて仲良くなるのです。そしてSerializeFieldはTextオブジェクトくんがアンサーを返せるようにするための呪文です。</p>
             </div>
             <br />
+
             <div class="code-explanation">
                 <img src="../image/32.png" alt="関数">
-                <p>これは関数を定義しています。関数とは、<span id="highlight-red">機能や動作</span>です。</p>
-                <p>例えば、猫型ロボットというクラスがあったとしたら、「秘密道具を出す」、「どら焼きを食べる」、「押し入れで寝る」などの関数が考えられるでしょう。ちなみに今回のOnMouseDown()は組み込み関数です。</p>
+                <h2>関数</h2>
+                <p>これは関数を定義しています。関数とは、クラスの<span id="highlight-red">機能や動作</span>を定義するものです。</p>
+                <p>例えば、猫型ロボットというクラスがあったとしたら、「秘密道具を出す」、「どら焼きを食べる」、「押し入れで寝る」などの関数が考えられるでしょう。</p><br />                
+
+                <p>関数は下図のような要素でできています。</p>
+                <img src="../image/33.png" alt="関数の定義"><br /><br />              
+
+                <p>また、関数は変数と違って定義するだけでは力を発揮せず、その関数を呼び出す(実行する)ことでその中身の処理を行うことができます。</p>
+                <p>しかし、今回のOnMouseDown()関数はどこからも呼ばれていないのに、オブジェクトがクリックされた時に実行されます。なぜでしょう？</p>
+                <p>実は関数にはユーザー定義関数と、組み込み関数の2種類あります。</p>
+                <!--関数の違いを示す表-->
+                <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                    <tr>
+                        <th style="border: 2px solid #ddd; padding: 8px; text-align: left;">種類</th>
+                        <th style="border: 2px solid #ddd; padding: 8px; text-align: left;">説明</th>
+                        <th style="border: 2px solid #ddd; padding: 8px; text-align: left;">例</th>
+                    </tr>
+                    <tr>
+                        <td style="border: 2px solid #ddd; padding: 8px;">ユーザー定義関数</td>
+                        <td style="border: 2px solid #ddd; padding: 8px;">プログラマーが自分で作る関数。自分の好きな名前をつけられ、好きなタイミングで呼び出せる。(関数を呼びだす必要がある)</td>
+                        <td style="border: 2px solid #ddd; padding: 8px;">void Attack()、int GetScore()</td>
+                    </tr>
+
+                    <tr>
+                        <td style="border: 2px solid #ddd; padding: 8px;">組み込み関数</td>
+                        <td style="border: 2px solid #ddd; padding: 8px;">Unityなどプログラミング言語が最初から用意してくれている関数。決まった名前で、決まったタイミングで呼び出される。(関数を呼びだす必要がない)</td>
+                        <td style="border: 2px solid #ddd; padding: 8px;">OnMouseDown()、Start()、Update()</td>
+                    </tr>
+
+                </table>
+                <p>つまりOnMouseDown()関数は組み込み関数であるため、呼び出さずともオブジェクトがクリックされた時に実行されるわけです。</p><br />
+
+                <h2>if文</h2>
+                <p>関数の中身を見ると、「if」とたくさん書かれているのが分かります。これは、「if文」といって全てのプログラミング言語に存在する、最もよく使われている構文です。</p><br />
+    
+                <img src="../image/34.png" alt="if文">
+                <p>if文の構造は上図のようになっています。<a id="highlight-red">条件が満たされた時に中の処理を行う</a>という意味です。</p>
+                <p>例：</p>
+                <img src="../image/35.png" alt="if文の例"><br /><br />
+
+
+                <p>他にも機能があって、</p>
+                <img src="../image/36.png" alt="if文2">
+                <p>上図のように書かれているときは<a id="highlight-red">条件が満たされた時処理1, 条件が満たされなかったら処理2を行う</a>という意味になります。</p>
+                <p>例:</p>
+                <img src="../image/37.png" alt="if文の例2"><br /><br />
+
+                <img src="../image/38.png" alt="if文3">
+                <p>上図のように書かれているときは、<a id="highlight-red">条件1が満たされた時処理1, 条件1が満たされず、かつ条件2が満たされているときに処理2, 条件1も条件2も満たされなかったときは処理3を行う</a>という意味になります。</p><br />
+                <p class="warning"><i class="fas fa-exclamation-triangle"></i> else ifはいくらでも繋げられますが、大量に繋げたときのコードが読み辛すぎてプログラマーからは嫌われます。</p><br />
+
+
+                <p>例:</p>
+                <img src="../image/39.png" alt="if文の例3"><br /><br /><br />
+
+                <p>これを踏まえて今回のコードを見てください。</p>
+                <img src="../image/40.png" alt="括弧省略">
+                <p>このようにif文は処理が1行の時は括弧を省略して書くことができます。</p>
+                <p>また、returnは<a id="highlight-red">ここから下の処理はしませんよ</a>という意味です。</p>
+                <p>つまり、このif文はゲームオーバーしたときに残りの処理を飛ばすために使われています。</p><br /><br />
+
+                <img src="../image/41.png" alt="関数のメインの処理">
+                <p>このif文は、はずれの爆弾ならゲームオーバーにして負けメッセージを表示、はずれの爆弾でなければ自分自身(this.gameObject)を消すという処理です。</p>
+                <p>つまり<a href="#setting-failed">これ</a>は、はずれの爆弾のisFailedをtrueにしていたわけですね。</p>
             </div>
+            <p>以上でコードの解説は終わりです。</p>
+        </section>
+
+        <section id="section8">
+            <h2>8.チャレンジ</h2>
+            <p>ここからはとうとうプログラマーデビューです。いくつか修正案を挙げておくので、それを参考にしながら自分なりにアレンジしてみてください。中級、上級を終えてからもう一度チャレンジしてみても良いかもしれません。</p>
+            <p>分からなかったら調べて、生成AI使って、先輩に聞いて解決しましょう。何度も調べて書いているうちに覚えてきます。</p>
+            <small>ちなみに筆者はかれこれプログラミングを初めてから8年くらい経ちますが、未だに覚えていないものだらけでずっと調べています。</small>
+            
+            <div class="challenge-list">
+                <p class="challenge-item"><span class="level">LEVEL1</span>はずれの爆弾の数を増やそう</p>
+                <p class="challenge-item"><span class="level">LEVEL2</span>セーフの爆弾をクリックしたときは「セーフ」と表示しよう</p>
+                <p class="challenge-item"><span class="level">LEVEL3</span>スコアの追加</p>
+            </div>
+            <p>正直レベル3は現時点ではまあ難しいと思います。一旦LEVEL2までこなして、レベル3は飛ばしても大丈夫です。</p>
         </section>
     </div>
 </body>
-
-
-</html> 
+</html>
