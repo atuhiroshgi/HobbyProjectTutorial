@@ -406,25 +406,19 @@
 }
 
 .start-btn {
-    background: #222;
-    color: #fff;
-    border: 2px solid #222;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+    display: inline-block;
     padding: 15px 30px;
-    border-radius: 8px;
+    background-color: #222;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .start-btn:hover {
-    background: #fff;
-    color: #222;
+    background-color: #444;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
 .start-btn i {
@@ -597,4 +591,25 @@
 .submit-btn:hover {
     background: #fff;
     color: #222;
+}
+
+.web-section {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 2px solid #eee;
+}
+
+.web-guide {
+    background-color: #f8f9fa;
+    margin-top: 30px;
+}
+
+.web-guide .start-text h2 i {
+    color: #3498db;
+}
+
+@media (max-width: 768px) {
+    .web-guide .start-text h2 i {
+        color: #3498db;
+    }
 } 

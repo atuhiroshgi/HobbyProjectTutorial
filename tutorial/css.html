@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS基礎チュートリアル</title>
+    <!-- Font Awesome を追加 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/tutorial.css">
+</head>
+<body>
+    <a href="../index.html" class="back-btn">戻る</a>
+    <div class="tutorial-content">
+        <h1>CSS基礎チュートリアル</h1>
+        
+        <section>
+            <h2>1. CSSとは</h2>
+            <p>CSSは、Webページのスタイルやレイアウトを定義するためのスタイルシート言語です。</p>
+            <ul class="feature-list">
+                <li>色やフォントの設定</li>
+                <li>レイアウトの調整</li>
+                <li>アニメーションの作成</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. CSSの基本構文</h2>
+            <p>CSSの基本的な書き方：</p>
+            <pre><code>セレクタ {
+    プロパティ: 値;
+    プロパティ: 値;
+}</code></pre>
+            <p>例：</p>
+            <pre><code>h1 {
+    color: blue;
+    font-size: 24px;
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>3. セレクタの種類</h2>
+            <p>主なCSSセレクタ：</p>
+            <ul class="selector-list">
+                <li><code>要素</code> - 例：p, h1, div</li>
+                <li><code>.クラス名</code> - 例：.header, .button</li>
+                <li><code>#ID名</code> - 例：#main, #footer</li>
+                <li><code>要素:hover</code> - マウスホバー時</li>
+                <li><code>親要素 > 子要素</code> - 直接の子要素</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. レイアウト</h2>
+            <p>モダンなレイアウト手法：</p>
+            <ul class="layout-methods">
+                <li>Flexbox
+                    <ul>
+                        <li>一次元のレイアウト</li>
+                        <li>要素の配置と整列</li>
+                    </ul>
+                </li>
+                <li>Grid
+                    <ul>
+                        <li>二次元のレイアウト</li>
+                        <li>格子状の配置</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. レスポンシブデザイン</h2>
+            <p>異なる画面サイズに対応するための技術：</p>
+            <pre><code>@media screen and (max-width: 768px) {
+    /* スマートフォン向けのスタイル */
+    .container {
+        width: 100%;
+    }
+}</code></pre>
+        </section>
+    </div>
+
+    <a href="#" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../js/scroll.js"></script>
+</body>
+</html> 

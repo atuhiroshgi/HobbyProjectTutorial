@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web開発環境構築ガイド</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/tutorial.css">
+</head>
+<body>
+    <a href="../index.html" class="back-btn">戻る</a>
+    <div class="tutorial-content">
+        <h1>Web開発環境構築ガイド</h1>
+        
+        <section>
+            <h2>1. Visual Studio Codeのインストール</h2>
+            <p>Web開発で使用するコードエディタをインストールします。</p>
+            <ul class="setup-steps">
+                <li>Visual Studio Code公式サイトにアクセス（<a href="https://code.visualstudio.com/" target="_blank">ダウンロードページ</a>）</li>
+                <li>Windows用インストーラーをダウンロード</li>
+                <li>ダウンロードしたインストーラーを実行</li>
+                <li>インストール完了後、Visual Studio Codeを起動</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. 日本語化と拡張機能のインストール</h2>
+            <p>Visual Studio Codeを使いやすくするための設定を行います。</p>
+            <ul class="setup-steps">
+                <li>左側のExtensionsアイコンをクリック（または Ctrl+Shift+X）</li>
+                <li>検索バーで「Japanese」と入力し、「Japanese Language Pack」をインストール</li>
+                <li>Visual Studio Codeを再起動して日本語化を適用</li>
+                <li>同様に以下の拡張機能をインストール：
+                    <ul>
+                        • Live Server（HTMLファイルをブラウザで確認）</li><br />
+                        • Auto Rename Tag（HTMLタグの編集補助）</li><br />
+                        • HTML CSS Support（HTMLとCSSの入力補完）</li><br />
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. 作業フォルダの準備</h2>
+            <p>Web制作用のフォルダを作成します。</p>
+            <ul class="setup-steps">
+                <li>デスクトップなど分かりやすい場所に新しいフォルダを作成</li>
+                <li>Visual Studio Codeを開き、「ファイル」→「フォルダを開く」で作成したフォルダを選択</li>
+                <li>以下のような構成でフォルダとファイルを作成：
+                    <pre><code>project/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+└── images/</code></pre>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. 動作確認</h2>
+            <p>環境が正しく構築できているか確認します。</p>
+            <ul class="setup-steps">
+                <li>index.htmlに基本的なHTMLを記述</li>
+                <li>Live Serverを起動（右クリック→「Live Serverで開く」）</li>
+                <li>ブラウザが起動し、作成したページが表示されることを確認</li>
+            </ul>
+        </section>
+    </div>
+
+    <a href="#" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../js/scroll.js"></script>
+</body>
+</html> 

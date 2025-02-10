@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>おもちゃプロジェクト チュートリアル</title>
+    <!-- Font Awesome を追加 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -36,17 +38,37 @@
             </div>
             <a href="tutorial/getting-started.html" class="start-btn">
                 <i class="fas fa-arrow-right"></i>
-                環境構築ガイド
+                Unity環境構築ガイド
+            </a>
+        </div>
+    </div>
+
+    <!-- Web開発チュートリアルのカード -->
+    <div class="getting-started web-guide">
+        <div class="getting-started-content">
+            <div class="start-text">
+
+                <h2>
+                    <i class="fas fa-code"></i>
+                    はじめてWeb制作をする方へ
+                </h2>
+                <p>Web制作に必要なエディタのインストールから、基本的な使い方まで丁寧に解説します。<br>
+                    プログラミング未経験の方でも安心してスタートできるガイドをご用意しています。</p>
+            </div>
+            <a href="tutorial/web-started.html" class="start-btn">
+                <i class="fas fa-arrow-right"></i>
+                Web開発環境構築ガイド
             </a>
         </div>
     </div>
 
     <div class="container">
         <h1>Unityチュートリアル</h1>
-        <p class="subtitle">レベルに合わせて楽しく学べるUnityゲーム開発講座</p>
+        <p class="subtitle">レベルに合わせて楽しく学べるUnityゲーム開発</p>
         
-
+        <!-- Unityチュートリアルのカード -->
         <div class="tutorial-grid">
+            <!-- 初級編 -->
             <div class="tutorial-card">
                 <div class="card-header beginner">
                     <h2>初級</h2>
@@ -66,6 +88,7 @@
                 </div>
             </div>
 
+            <!-- 中級編 -->
             <div class="tutorial-card">
                 <div class="card-header intermediate">
                     <h2>中級</h2>
@@ -83,6 +106,7 @@
                 </div>
             </div>
 
+            <!-- 上級編 -->
             <div class="tutorial-card">
                 <div class="card-header advanced">
                     <h2>上級</h2>
@@ -100,6 +124,7 @@
                 </div>
             </div>
 
+            <!-- 応用編 -->
             <div class="tutorial-card">
                 <div class="card-header application">
                     <h2>応用</h2>
@@ -117,8 +142,70 @@
                 </div>
             </div>
         </div>
+
+        <h1 class="web-section">Web開発チュートリアル</h1>
+        <p class="subtitle">HTML, CSS, JavaScriptを使ったWebサイト制作の基礎</p>
+
+        <!-- Web開発チュートリアルのカード -->
+        <div class="tutorial-grid">
+            <!-- HTML編 -->
+            <div class="tutorial-card">
+
+                <div class="card-header beginner">
+                    <h2>HTML編</h2>
+                    <span class="time-badge">推定所要時間: 2時間</span>
+                </div>
+                <div class="card-content">
+                    <h3>Webサイトの基礎</h3>
+                    <p>HTMLの基本的な構造とタグの使い方を学び、シンプルなWebページを作成するチュートリアル</p>
+                    <ul class="feature-list">
+                        <li>HTMLの基本構造</li>
+                        <li>主要なタグの使い方</li>
+                        <li>フォーム要素の実装</li>
+                    </ul>
+                    <a href="tutorial/html.html" class="tutorial-btn">開始する</a>
+                </div>
+            </div>
+
+            <!-- CSS編 -->
+            <div class="tutorial-card">
+                <div class="card-header intermediate">
+                    <h2>CSS編</h2>
+                    <span class="time-badge">推定所要時間: 3時間</span>
+                </div>
+                <div class="card-content">
+                    <h3>スタイリングの基本</h3>
+                    <p>CSSを使ってWebページをデザインし、レスポンシブなレイアウトを作成するチュートリアル</p>
+                    <ul class="feature-list">
+                        <li>CSSセレクタとプロパティ</li>
+                        <li>Flexboxとグリッドレイアウト</li>
+                        <li>レスポンシブデザイン</li>
+                    </ul>
+                    <a href="tutorial/css.html" class="tutorial-btn">開始する</a>
+                </div>
+            </div>
+
+            <!-- JavaScript編 -->
+            <div class="tutorial-card">
+                <div class="card-header advanced">
+                    <h2>JavaScript編</h2>
+                    <span class="time-badge">推定所要時間: 4時間</span>
+                </div>
+                <div class="card-content">
+                    <h3>インタラクティブな機能実装</h3>
+                    <p>JavaScriptを使って動的な機能を実装し、ユーザー体験を向上させるチュートリアル</p>
+                    <ul class="feature-list">
+                        <li>DOM操作の基本</li>
+                        <li>イベントハンドリング</li>
+                        <li>アニメーション実装</li>
+                    </ul>
+                    <a href="tutorial/javascript.html" class="tutorial-btn">開始する</a>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- フッター -->
     <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -168,7 +255,7 @@
                 <div class="about-section">
                     <i class="fas fa-users"></i>
                     <h3>対象者</h3>
-                    <p>初めてのプログラミングする人～Unity初心者向けの資料になっています。既にUnityをある程度触れる人、プログラミングに絶対の自信がある人にはぬるいかもしれません。</p>
+                    <p>初めてのプログラミングする人～プログラミング初心者向けの資料になっています。既にUnityをある程度触れる人、プログラミングに自信がある人には少し難易度が低いかもしれません。</p>
                 </div>
                 <div class="about-section">
                     <i class="fas fa-code"></i>
@@ -188,8 +275,14 @@
         </div>
     </div>
 
+    <!-- スクロールトップボタン -->
+    <a href="#" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
     <!-- Font Awesome と modal.js の追加 -->
     <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
     <script src="js/modal.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>
