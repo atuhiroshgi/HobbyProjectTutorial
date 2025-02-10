@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>おもちゃプロジェクト チュートリアル</title>
+    <title>おもちゃプロジェクト プログラム班 チュートリアル</title>
     <!-- Font Awesome を追加 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/common.css">
@@ -14,7 +14,7 @@
         <div class="header-content">
             <div class="logo">
                 <i class="fas fa-gamepad"></i>
-                <span>おもちゃプロジェクト チュートリアル</span>
+                <span>おもちゃプロジェクト プログラム班 チュートリアル</span>
             </div>
             <!-- ハンバーガーメニューボタンを追加 -->
             <button class="menu-toggle">
@@ -29,6 +29,23 @@
             </nav>
         </div>
     </header>
+
+    <div class="project-overview">
+        <div class="overview-content">
+            <h2>
+                <i class="fas fa-project-diagram"></i>
+                おもちゃプロジェクト プログラム班について
+            </h2>
+            <p>おもちゃプロジェクトのプログラム班では、以下の3つの開発分野を主に扱っています：</p>
+            <ul class="development-areas">
+                <li><i class="fas fa-gamepad"></i> Unityを使用したゲーム開発</li>
+                <li><i class="fas fa-code"></i> HTML/CSS/JavaScriptによるWeb制作</li>
+                <li><i class="fas fa-microchip"></i> フィジカルコンピューティング</li>
+            </ul>
+            <p>また、プロジェクト全体でGitHubを使用してソースコード管理を行っています。<br>
+               このサイトでは、各開発分野の環境構築から基本的な使い方まで、段階的に学べるチュートリアルを提供しています。</p>
+        </div>
+    </div>
 
     <div class="getting-started">
         <div class="getting-started-content">
@@ -67,7 +84,14 @@
     </div>
 
     <div class="container">
-        <h1>Unityチュートリアル</h1>
+        <!-- 背景アイコン用のコンテナ -->
+        <div class="background-icons">
+            <img src="image/UnityIcon.png" alt="Unity" class="bg-icon unity-icon">
+            <img src="image/JavaScriptIcon.png" alt="JavaScript" class="bg-icon js-icon">
+            <img src="image/GitHubIcon.png" alt="GitHub" class="bg-icon github-icon">
+        </div>
+
+        <h1 class="unity-section">Unityチュートリアル</h1>
         <p class="subtitle">レベルに合わせて楽しく学べるUnityゲーム開発</p>
         
         <!-- Unityチュートリアルのカード -->
@@ -207,6 +231,48 @@
                 </div>
             </div>
         </div>
+
+        <!-- GitHub開発チュートリアルのカード -->
+        <h1 class="github-section">GitHub入門</h1>
+        <p class="subtitle">バージョン管理とチーム開発の基礎</p>
+
+        <div class="tutorial-grid">
+            <!-- GitHub Desktop編 -->
+            <div class="tutorial-card">
+                <div class="card-header github">
+                    <h2>GitHub Desktop</h2>
+                    <span class="time-badge">推定所要時間: 1時間</span>
+                </div>
+                <div class="card-content">
+                    <h3>GitHubの基本操作</h3>
+                    <p>GitHubアカウントの作成からGitHub Desktopの使い方まで、バージョン管理の基礎を学ぶチュートリアル</p>
+                    <ul class="feature-list">
+                        <li>GitHubアカウントの作成</li>
+                        <li>GitHub Desktopのインストール</li>
+                        <li>基本的なGit操作</li>
+                    </ul>
+                    <a href="tutorial/github.html" class="tutorial-btn">開始する</a>
+                </div>
+            </div>
+
+            <!-- Git/GitHub注意点 -->
+            <div class="tutorial-card">
+                <div class="card-header github-advanced">
+                    <h2>Git/GitHub注意点</h2>
+                    <span class="time-badge">推定所要時間: 1時間</span>
+                </div>
+                <div class="card-content">
+                    <h3>GitHubを使う上での注意点</h3>
+                    <p>GitHubを使用する際の重要な注意点とベストプラクティスを学ぶガイド</p>
+                    <ul class="feature-list">
+                        <li>コミットメッセージの書き方</li>
+                        <li>アップロード時の注意点</li>
+                        <li>トラブル防止のポイント</li>
+                    </ul>
+                    <a href="tutorial/github-advanced.html" class="tutorial-btn">開始する</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- フッター -->
@@ -275,7 +341,14 @@
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <h2>お問い合わせ</h2>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf9Ag-HU_gY-W0O1i32NIdVCqeagry44vJafYzD2WTUnHojOQ/viewform?embedded=true" width="100%" height="500px" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe22q_TcaBH86Xy1_ufMOaDK9_fZG4bgis0wnRReKQign0maw/viewform?embedded=true" 
+                    width="100%" 
+                    height="500px" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">
+                読み込んでいます...
+            </iframe>
         </div>
     </div>
 
@@ -289,5 +362,6 @@
     <script src="js/modal.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/background-fade.js"></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
     max-width: 1200px;
     margin: 50px auto;
     padding: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
 .subtitle {
@@ -597,6 +599,7 @@
     margin-top: 80px;
     padding-top: 40px;
     border-top: 2px solid #eee;
+    position: relative;
 }
 
 .web-guide {
@@ -612,4 +615,130 @@
     .web-guide .start-text h2 i {
         color: #3498db;
     }
+}
+
+/* GitHub セクションのスタイル */
+.github-section {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 2px solid #eee;
+    position: relative;
+}
+
+.card-header.github {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+}
+
+.card-header.github-advanced {
+    background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+    color: white;
+}
+
+/* プロジェクト概要のスタイル */
+.project-overview {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.overview-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.overview-content h2 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+.overview-content h2 i {
+    margin-right: 15px;
+    color: #3498db;
+}
+
+.overview-content p {
+    color: #34495e;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.development-areas {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.development-areas li {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1em;
+    color: #2c3e50;
+    border: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.development-areas li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.development-areas i {
+    margin-right: 12px;
+    color: #3498db;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+    .project-overview {
+        padding: 40px 15px;
+    }
+
+    .overview-content h2 {
+        font-size: 1.8em;
+    }
+
+    .development-areas {
+        gap: 20px;
+    }
+
+    .development-areas li {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px 20px;
+    }
+}
+
+/* 背景アイコンのスタイル */
+.background-icons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.bg-icon {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vh;
+    height: 80vh;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    object-fit: contain;
 } 

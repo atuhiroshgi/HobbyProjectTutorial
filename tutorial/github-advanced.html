@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub利用の注意点</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/tutorial.css">
+</head>
+<body>
+    <a href="../index.html" class="back-btn">戻る</a>
+    <div class="tutorial-content">
+        <h1>GitHub利用の注意点</h1>
+        
+        <section>
+            <h2>1. コミットメッセージの重要性</h2>
+            <p>適切なコミットメッセージは、プロジェクトの履歴を理解する上で非常に重要です。</p>
+            <ul class="feature-list">
+                <li>良いコミットメッセージの例
+                    <ul>
+                        <li>「ログイン機能を追加」</li>
+                        <li>「ヘッダーのレイアウトを修正」</li>
+                        <li>「パフォーマンスの改善：画像の最適化」</li>
+                    </ul>
+                </li>
+                <li>避けるべきコミットメッセージ
+                    <ul>
+                        <li>「修正」</li>
+                        <li>「更新」</li>
+                        <li>「バグ修正」（どのバグかを具体的に書くべき）</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. 気をつけるべきファイル</h2>
+            <p>GitHubにアップロードしてはいけないファイルや情報があります。</p>
+            <ul class="feature-list">
+                <li>アップロードを避けるべきもの
+                    <ul>
+                        <li>パスワードやAPIキーなどの機密情報</li>
+                        <li>個人情報を含むファイル</li>
+                        <li>大容量のビルドファイル</li>
+                        <li>実行ファイル（.exe等）</li>
+                        <li>ログファイル</li>
+                    </ul>
+                </li>
+                <li>.gitignoreの活用
+                    <ul>
+                        <li>無視したいファイルやフォルダを指定</li>
+                        <li>自動生成されるファイルを除外</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. プッシュする前の確認事項</h2>
+            <p>GitHubにプッシュする前に必ず確認しましょう。</p>
+            <ul class="feature-list">
+                <li>コードの確認
+                    <ul>
+                        <li>デバッグ用のコードが残っていないか</li>
+                        <li>コメントアウトした不要なコードの削除</li>
+                        <li>機密情報が含まれていないか</li>
+                    </ul>
+                </li>
+                <li>動作確認
+                    <ul>
+                        <li>基本的な機能が正常に動作するか</li>
+                        <li>エラーが発生していないか</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. トラブル防止のために</h2>
+            <p>よくある問題とその対策について説明します。</p>
+            <ul class="feature-list">
+                <li>プッシュする前に
+                    <ul>
+                        <li>最新の変更を必ずプル（同期）する</li>
+                        <li>コンフリクトの有無を確認</li>
+                        <li>大きな変更は小分けにコミット</li>
+                    </ul>
+                </li>
+                <li>トラブルが起きた場合
+                    <ul>
+                        <li>慌てて操作しない</li>
+                        <li>変更履歴を確認</li>
+                        <li>必要に応じてチームに相談</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. チーム開発での注意点</h2>
+            <p>他のメンバーと協力して開発を進める際の注意点です。</p>
+            <ul class="feature-list">
+                <li>コミュニケーション
+                    <ul>
+                        <li>作業内容を事前に共有</li>
+                        <li>重要な変更は必ず報告</li>
+                        <li>問題が発生したら早めに相談</li>
+                    </ul>
+                </li>
+                <li>作業の進め方
+                    <ul>
+                        <li>同じファイルの同時編集を避ける</li>
+                        <li>定期的に進捗を共有</li>
+                        <li>コードレビューを積極的に行う</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <a href="#" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../js/scroll.js"></script>
+</body>
+</html> 
