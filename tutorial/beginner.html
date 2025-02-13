@@ -51,13 +51,14 @@
             <img src="../image/04.png" alt="Unityの画面をFullHDにする">
             <p>FreeAspectをクリック→FullHD(1920×1080)を選択<br />基本的にPCの画面は1920×1080の解像度が多いので、これを選択するとゲームの画面がきれいに表示されることが多いです。</p><br />
             
-            <img src="../image/05.png" alt="Sceneの名前を変える">
-            <p>プロジェクトウィンドウでScenesフォルダをクリック→Sceneを右クリック→名前を変更→名前をGameに変更</p>
-            <p>シーンとはヒエラルキー、シーン、ゲームウィンドウをまとめたものでシーンを切り替えることでタイトル→ゲーム画面やゲームオーバー画面→タイトルなどを再現できます。</p><br />
- 
             <img src="../image/06.png" alt="フォルダを作る">
             <img src="../image/07.png" alt="名前変更後">
             <p>プロジェクトウィンドウで右クリック→Create→Folderをクリック→名前をScriptsに変更</p><br />
+            
+            <img src="../image/05.png" alt="Sceneの名前を変える">
+            <p>プロジェクトウィンドウでScenesフォルダをクリック→SampleSceneを右クリック→名前を変更をクリック→名前をGameに変更</p>
+            <p>シーンとはヒエラルキー、シーン、ゲームウィンドウをまとめたものでシーンを切り替えることでタイトル→ゲーム画面やゲームオーバー画面→タイトルなどを再現できます。</p><br />
+ 
         </section>
 
         <section id="section3">
@@ -81,6 +82,7 @@
             <p class="tool-description">②向き: オブジェクトの向きを表す数字。左から順にx, y, zの向きが表示されていてこれを変えることでオブジェクトを正確な向きに配置できます。</p>
             <p class="tool-description">③大きさ: オブジェクトの大きさを表す数字。左から順にx, y, zの大きさが表示されていてこれを変えることでオブジェクトを正確な大きさに変えることができます。</p>
             <p class="tool-description">④形と色: オブジェクトの形と色を変えることができます。Spriteに入っている画像が形、Colorの右のウィンドウが色です。</p><br />
+            <!--下の行を強調-->
             <p>操作に慣れるまで好きな位置に色んな形のオブジェクトを置いてみてください</p>
         </section>
 
@@ -92,7 +94,7 @@
             <img src="../image/11.png" alt="スクリプトの作成"><br />
             <img src="../image/12.png" alt="Targetスクリプトも作成"><br />
 
-            <p>まずはGameManagerスクリプトをダブルクリックして開いてみましょう</p>
+            <p>まずはBombスクリプトをダブルクリックして開いてみましょう</p>
             <img src="../image/13.png" alt="GameManagerスクリプト">
             <p>VisualStudioが開いて図のようなコードが書いてあればOKです。</p><br />
             <p>確認出来たら、書いてあるコードを全て消して、以下のコードを書いてください。コピーもできます。</p>
@@ -107,7 +109,8 @@ public class Bomb : MonoBehaviour
 {
     [SerializeField, Header("「You Lose!」を表示するテキストボックス")]
     private Text resultText;
-    private bool isFailed = false; // はずれなら true
+    [SerializeField, Header("はずれの爆弾ならtrue")]
+    private bool isFailed = false;
     private bool gameEnded = false; // 一度負けたら他のクリックを無効化
 
     private void OnMouseDown()
@@ -131,30 +134,32 @@ public class Bomb : MonoBehaviour
 <span class="line-numbers">5</span>{
 <span class="line-numbers">6</span>    [SerializeField, Header("「You Lose!」を表示するテキストボックス")]
 <span class="line-numbers">7</span>    private Text resultText;
-<span class="line-numbers">8</span>    private bool isFailed = false; // はずれなら true
-<span class="line-numbers">9</span>    private bool gameEnded = false; // 一度負けたら他のクリックを無効化
-<span class="line-numbers">10</span>
-<span class="line-numbers">11</span>    private void OnMouseDown()
-<span class="line-numbers">12</span>    {
-<span class="line-numbers">13</span>        if (gameEnded) return; // ゲームが終わっていたら何もしない
-<span class="line-numbers">14</span>
-<span class="line-numbers">15</span>        if (isFailed)
-<span class="line-numbers">16</span>        {
-<span class="line-numbers">17</span>            gameEnded = true;
-<span class="line-numbers">18</span>            resultText.text = "You Lose!"; // 負けメッセージを表示
-<span class="line-numbers">19</span>        }
-<span class="line-numbers">20</span>        else
-<span class="line-numbers">21</span>        {
-<span class="line-numbers">22</span>            Destroy(this.gameObject); // クリックされたらオブジェクトを消す
-<span class="line-numbers">23</span>        }
-<span class="line-numbers">24</span>    }
-<span class="line-numbers">25</span>}</code></pre>
+<span class="line-numbers">8</span>    [SerializeField, Header("はずれの爆弾ならtrue")]
+<span class="line-numbers">9</span>    private bool isFailed = false;
+<span class="line-numbers">10</span>    private bool gameEnded = false; // 一度負けたら他のクリックを無効化
+<span class="line-numbers">11</span>
+<span class="line-numbers">12</span>    private void OnMouseDown()
+<span class="line-numbers">13</span>    {
+<span class="line-numbers">14</span>        if (gameEnded) return; // ゲームが終わっていたら何もしない
+<span class="line-numbers">15</span>
+<span class="line-numbers">16</span>        if (isFailed)
+<span class="line-numbers">17</span>        {
+<span class="line-numbers">18</span>            gameEnded = true;
+<span class="line-numbers">19</span>            resultText.text = "You Lose!"; // 負けメッセージを表示
+<span class="line-numbers">20</span>        }
+<span class="line-numbers">21</span>        else
+<span class="line-numbers">22</span>        {
+<span class="line-numbers">23</span>            Destroy(this.gameObject); // クリックされたらオブジェクトを消す
+<span class="line-numbers">24</span>        }
+<span class="line-numbers">25</span>    }
+<span class="line-numbers">26</span>}</code></pre>
             </div>
             <script src="../js/codeBlock.js"></script>
             <br />
 
 <!--ここまでコードブロック-->
 
+<!--保存を忘れずに的な要素を加える-->>
         <p>下図のようになればOKです。</p>
         <img src="../image/14.png" alt="Bombクラス(記述後)"><br />
 
@@ -187,7 +192,7 @@ public class Bomb : MonoBehaviour
             <p>Colliderとは当たり判定のことで、オブジェクトにColliderをつけることで緑の枠の範囲に当たり判定を作ることができます。</p>
             <img src="../image/20.png" alt="Colliderの確認"><br />
 
-            <p>次にBombスクリプトをAddComponentに向かってドラッグアンドドロップしてください。</p>
+            <p>次にBombスクリプトをオブジェクトのAddComponentに向かってドラッグアンドドロップしてください。</p>
             <img src="../image/21.png" alt="Bombスクリプトのアタッチ">
             <p>図のようになればOKです。</p>
 
@@ -293,7 +298,7 @@ public class Bomb : MonoBehaviour
             <div class="code-explanation">
                 <img src="../image/32.png" alt="関数">
                 <h2>関数</h2>
-                <p>これは関数を定義しています。関数とは、クラスの<span id="highlight-red">機能や動作</span>を定義するものです。</p>
+                <p>これは関数を定義(宣言)しています。関数とは、クラスの<span id="highlight-red">機能や動作</span>を定義するものです。</p>
                 <p>例えば、猫型ロボットというクラスがあったとしたら、「秘密道具を出す」、「どら焼きを食べる」、「押し入れで寝る」などの関数が考えられるでしょう。</p><br />                
 
                 <p>関数は下図のような要素でできています。</p>
@@ -371,7 +376,7 @@ public class Bomb : MonoBehaviour
                 <p class="challenge-item"><span class="level">LEVEL2</span>セーフの爆弾をクリックしたときは「セーフ」と表示しよう</p>
                 <p class="challenge-item"><span class="level">LEVEL3</span>スコアの追加</p>
             </div>
-            <p>正直レベル3は現時点ではまあ難しいと思います。一旦LEVEL2までこなして、レベル3は飛ばしても大丈夫です。</p>
+            <p>正直レベル3は現時点ではまあ難しいと思います。一旦レベル2までこなして、レベル3は飛ばしても大丈夫です。</p>
         </section>
     </div>
 
