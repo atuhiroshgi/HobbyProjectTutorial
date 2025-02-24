@@ -1,367 +1,433 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>おもちゃプロジェクト プログラム班 チュートリアル</title>
     <!-- Font Awesome を追加 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/index.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
     <header class="main-header">
-        <div class="header-content">
-            <div class="logo">
-                <i class="fas fa-gamepad"></i>
-                <span>おもちゃプロジェクト プログラム班 チュートリアル</span>
-            </div>
-            <!-- ハンバーガーメニューボタンを追加 -->
-            <button class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="#about" class="about-btn">About</a></li>
-                    <li><a href="#contact" class="contact-btn">Contact</a></li>
-                </ul>
-            </nav>
+      <div class="header-content">
+        <div class="logo">
+          <i class="fas fa-gamepad"></i>
+          <span>おもちゃプロジェクト プログラム班 チュートリアル</span>
         </div>
+
+        <!-- ハンバーガーメニューボタンを追加 -->
+        <button class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#about" class="about-btn">About</a></li>
+            <li><a href="#contact" class="contact-btn">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <div class="project-overview">
-        <div class="overview-content">
-            <h2>
-                <i class="fas fa-project-diagram"></i>
-                おもちゃプロジェクト プログラム班について
-            </h2>
-            <p>おもちゃプロジェクトのプログラム班では、以下の3つの開発分野を主に扱っています：</p>
-            <ul class="development-areas">
-                <li><i class="fas fa-gamepad"></i> Unityを使用したゲーム開発</li>
-                <li><i class="fas fa-code"></i> HTML/CSS/JavaScriptによるWeb制作</li>
-                <li><i class="fas fa-microchip"></i> フィジカルコンピューティング</li>
-            </ul>
-            <p>また、プロジェクト全体でGitHubを使用してソースコード管理を行っています。<br>
-               このサイトでは、各開発分野の環境構築から基本的な使い方まで、段階的に学べるチュートリアルを提供しています。</p>
-        </div>
+      <div class="overview-content">
+        <h2>
+          <i class="fas fa-project-diagram"></i>
+          おもちゃプロジェクト プログラム班について
+        </h2>
+        <p>
+          おもちゃプロジェクトのプログラム班では、以下の3つの開発分野を主に扱っています：
+        </p>
+        <ul class="development-areas">
+          <li><i class="fas fa-gamepad"></i> Unityを使用したゲーム開発</li>
+          <li><i class="fas fa-code"></i> HTML/CSS/JavaScriptによるWeb制作</li>
+          <li><i class="fas fa-microchip"></i> フィジカルコンピューティング</li>
+        </ul>
+        <p>
+          また、プロジェクト全体でGitHubを使用してソースコード管理を行っています。<br />
+          このサイトでは、各開発分野の環境構築から基本的な使い方まで、段階的に学べるチュートリアルを提供しています。
+        </p>
+      </div>
     </div>
 
     <div class="getting-started">
-        <div class="getting-started-content">
-            <div class="start-text">
-                <h2>
-                    <i class="fas fa-rocket"></i>
-                    はじめてUnityを使う方へ
-                </h2>
-                <p>Unity開発を始めるための環境構築から、基本的な使い方まで丁寧に解説します。<br>
-                    初心者の方でも安心してスタートできるガイドをご用意しています。</p>
-            </div>
-            <a href="tutorial/getting-started.html" class="start-btn">
-                <i class="fas fa-arrow-right"></i>
-                Unity環境構築ガイド
-            </a>
+      <div class="getting-started-content">
+        <div class="start-text">
+          <h2>
+            <i class="fas fa-rocket"></i>
+            はじめてUnityを使う方へ
+          </h2>
+          <p>
+            Unity開発を始めるための環境構築から、基本的な使い方まで丁寧に解説します。<br />
+            初心者の方でも安心してスタートできるガイドをご用意しています。
+          </p>
         </div>
+        <a href="tutorial/getting-started.html" class="start-btn">
+          <i class="fas fa-arrow-right"></i>
+          Unity環境構築ガイド
+        </a>
+      </div>
     </div>
 
     <!-- Web開発チュートリアルのカード -->
     <div class="getting-started web-guide">
-        <div class="getting-started-content">
-            <div class="start-text">
-
-                <h2>
-                    <i class="fas fa-code"></i>
-                    はじめてWeb制作をする方へ
-                </h2>
-                <p>Web制作に必要なエディタのインストールから、基本的な使い方まで丁寧に解説します。<br>
-                    プログラミング未経験の方でも安心してスタートできるガイドをご用意しています。</p>
-            </div>
-            <a href="tutorial/web-started.html" class="start-btn">
-                <i class="fas fa-arrow-right"></i>
-                Web開発環境構築ガイド
-            </a>
+      <div class="getting-started-content">
+        <div class="start-text">
+          <h2>
+            <i class="fas fa-code"></i>
+            はじめてWeb制作をする方へ
+          </h2>
+          <p>
+            Web制作に必要なエディタのインストールから、基本的な使い方まで丁寧に解説します。<br />
+            プログラミング未経験の方でも安心してスタートできるガイドをご用意しています。
+          </p>
         </div>
+        <a href="tutorial/web-started.html" class="start-btn">
+          <i class="fas fa-arrow-right"></i>
+          Web開発環境構築ガイド
+        </a>
+      </div>
     </div>
 
     <div class="container">
-        <!-- 背景アイコン用のコンテナ -->
-        <div class="background-icons">
-            <img src="image/UnityIcon.png" alt="Unity" class="bg-icon unity-icon">
-            <img src="image/JavaScriptIcon.png" alt="JavaScript" class="bg-icon js-icon">
-            <img src="image/GitHubIcon.png" alt="GitHub" class="bg-icon github-icon">
+      <!-- 背景アイコン用のコンテナ -->
+      <div class="background-icons">
+        <img src="image/UnityIcon.png" alt="Unity" class="bg-icon unity-icon" />
+        <img
+          src="image/JavaScriptIcon.png"
+          alt="JavaScript"
+          class="bg-icon js-icon"
+        />
+        <img
+          src="image/GitHubIcon.png"
+          alt="GitHub"
+          class="bg-icon github-icon"
+        />
+      </div>
+
+      <h1 class="unity-section">Unityチュートリアル</h1>
+      <p class="subtitle">レベルに合わせて楽しく学べるUnityゲーム開発</p>
+
+      <!-- Unityチュートリアルのカード -->
+      <div class="tutorial-grid">
+        <!-- 初級編 -->
+        <div class="tutorial-card">
+          <div class="card-header beginner">
+            <h2>初級</h2>
+            <span class="time-badge">推定所要時間: 3時間</span>
+          </div>
+          <div class="card-content">
+            <h3>爆弾ゲーム</h3>
+            <p>
+              プロジェクトの作り方からUIの表示まで、初めてUnityを使う方におすすめのチュートリアル
+            </p>
+            <ul class="feature-list">
+              <li>プロジェクトの下準備</li>
+              <li>UIの表示方法</li>
+              <li>Colliderの役割</li>
+            </ul>
+
+            <a href="tutorial/beginner.html" class="tutorial-btn">開始する</a>
+          </div>
         </div>
 
-        <h1 class="unity-section">Unityチュートリアル</h1>
-        <p class="subtitle">レベルに合わせて楽しく学べるUnityゲーム開発</p>
-        
-        <!-- Unityチュートリアルのカード -->
-        <div class="tutorial-grid">
-            <!-- 初級編 -->
-            <div class="tutorial-card">
-                <div class="card-header beginner">
-                    <h2>初級</h2>
-                    <span class="time-badge">推定所要時間: 3時間</span>
-                </div>
-                <div class="card-content">
-                    <h3>爆弾ゲーム</h3>
-                    <p>プロジェクトの作り方からUIの表示まで、初めてUnityを使う方におすすめのチュートリアル</p>
-                    <ul class="feature-list">
-                        <li>プロジェクトの下準備</li>
-                        <li>UIの表示方法</li>
-                        <li>Colliderの役割</li>
-                    </ul>
-
-
-                    <a href="tutorial/beginner.html" class="tutorial-btn">開始する</a>
-                </div>
-            </div>
-
-            <!-- 中級編 -->
-            <div class="tutorial-card">
-                <div class="card-header intermediate">
-                    <h2>中級</h2>
-                    <span class="time-badge">推定所要時間: 4時間</span>
-                </div>
-                <div class="card-content">
-                    <h3>ボール転がし</h3>
-                    <p>3D空間での物理演算とカメラワークを学ぶ、ステップアップ向けチュートリアル</p>
-                    <ul class="feature-list">
-                        <li>3Dオブジェクトの操作</li>
-                        <li>物理演算システム</li>
-                        <li>カメラのプログラミング</li>
-                    </ul>
-                    <a href="tutorial/intermediate.html" class="tutorial-btn">開始する</a>
-                </div>
-            </div>
-
-            <!-- 上級編 -->
-            <div class="tutorial-card">
-                <div class="card-header advanced">
-                    <h2>上級</h2>
-                    <span class="time-badge">推定所要時間: 6時間</span>
-                </div>
-                <div class="card-content">
-                    <h3>ブロック崩し</h3>
-                    <p>ゲームシステムの設計と物理演算の応用を学ぶ、本格的なゲーム開発チュートリアル</p>
-                    <ul class="feature-list">
-                        <li>高度な衝突判定</li>
-                        <li>ゲーム状態管理</li>
-                        <li>スコアシステム設計</li>
-                    </ul>
-                    <a href="tutorial/advanced.html" class="tutorial-btn">開始する</a>
-                </div>
-            </div>
-
-            <!-- 応用編 -->
-            <div class="tutorial-card">
-                <div class="card-header application">
-                    <h2>応用</h2>
-                    <span class="time-badge">推定所要時間: 10時間</span>
-                </div>
-                <div class="card-content">
-                    <h3>横スクロールアクション</h3>
-                    <p>プロフェッショナルなゲーム開発手法を学ぶ、総合的なチュートリアル</p>
-                    <ul class="feature-list">
-                        <li>アニメーションシステム</li>
-                        <li>Tilemap活用</li>
-                        <li>敵AIの実装</li>
-                    </ul>
-                    <a href="tutorial/application.html" class="tutorial-btn">開始する</a>
-                </div>
-            </div>
+        <!-- 中級編 -->
+        <div class="tutorial-card">
+          <div class="card-header intermediate">
+            <h2>中級</h2>
+            <span class="time-badge">推定所要時間: 4時間</span>
+          </div>
+          <div class="card-content">
+            <h3>ボール転がし</h3>
+            <p>
+              3D空間での物理演算とカメラワークを学ぶ、ステップアップ向けチュートリアル
+            </p>
+            <ul class="feature-list">
+              <li>3Dオブジェクトの操作</li>
+              <li>物理演算システム</li>
+              <li>カメラのプログラミング</li>
+            </ul>
+            <a href="tutorial/intermediate.html" class="tutorial-btn"
+              >開始する</a
+            >
+          </div>
         </div>
 
-        <h1 class="web-section">Web開発チュートリアル</h1>
-        <p class="subtitle">HTML, CSS, JavaScriptを使ったWebサイト制作の基礎</p>
-
-        <!-- Web開発チュートリアルのカード -->
-        <div class="tutorial-grid">
-            <!-- HTML編 -->
-            <div class="tutorial-card">
-
-                <div class="card-header beginner">
-                    <h2>HTML編</h2>
-                    <span class="time-badge">推定所要時間: 2時間</span>
-                </div>
-                <div class="card-content">
-                    <h3>Webサイトの基礎</h3>
-                    <p>HTMLの基本的な構造とタグの使い方を学び、シンプルなWebページを作成するチュートリアル</p>
-                    <ul class="feature-list">
-                        <li>HTMLの基本構造</li>
-                        <li>主要なタグの使い方</li>
-                        <li>フォーム要素の実装</li>
-                    </ul>
-                    <a href="tutorial/html.html" class="tutorial-btn">開始する</a>
-                </div>
-            </div>
-
-            <!-- CSS編 -->
-            <div class="tutorial-card">
-                <div class="card-header intermediate">
-                    <h2>CSS編</h2>
-                    <span class="time-badge">推定所要時間: 3時間</span>
-                </div>
-                <div class="card-content">
-                    <h3>スタイリングの基本</h3>
-                    <p>CSSを使ってWebページをデザインし、レスポンシブなレイアウトを作成するチュートリアル</p>
-                    <ul class="feature-list">
-                        <li>CSSセレクタとプロパティ</li>
-                        <li>Flexboxとグリッドレイアウト</li>
-                        <li>レスポンシブデザイン</li>
-                    </ul>
-                    <a href="tutorial/css.html" class="tutorial-btn">開始する</a>
-                </div>
-            </div>
-
-            <!-- JavaScript編 -->
-            <div class="tutorial-card">
-                <div class="card-header advanced">
-                    <h2>JavaScript編</h2>
-                    <span class="time-badge">推定所要時間: 4時間</span>
-                </div>
-                <div class="card-content">
-                    <h3>インタラクティブな機能実装</h3>
-                    <p>JavaScriptを使って動的な機能を実装し、ユーザー体験を向上させるチュートリアル</p>
-                    <ul class="feature-list">
-                        <li>DOM操作の基本</li>
-                        <li>イベントハンドリング</li>
-                        <li>アニメーション実装</li>
-                    </ul>
-                    <a href="tutorial/javascript.html" class="tutorial-btn">開始する</a>
-                </div>
-            </div>
+        <!-- 上級編 -->
+        <div class="tutorial-card">
+          <div class="card-header advanced">
+            <h2>上級</h2>
+            <span class="time-badge">推定所要時間: 6時間</span>
+          </div>
+          <div class="card-content">
+            <h3>ブロック崩し</h3>
+            <p>
+              ゲームシステムの設計と物理演算の応用を学ぶ、本格的なゲーム開発チュートリアル
+            </p>
+            <ul class="feature-list">
+              <li>高度な衝突判定</li>
+              <li>ゲーム状態管理</li>
+              <li>スコアシステム設計</li>
+            </ul>
+            <a href="tutorial/advanced.html" class="tutorial-btn">開始する</a>
+          </div>
         </div>
 
-        <!-- GitHub開発チュートリアルのカード -->
-        <h1 class="github-section">GitHub入門</h1>
-        <p class="subtitle">バージョン管理とチーム開発の基礎</p>
-
-        <div class="tutorial-grid">
-            <!-- GitHub Desktop編 -->
-            <div class="tutorial-card">
-                <div class="card-header github">
-                    <h2>GitHub Desktop</h2>
-                    <span class="time-badge">推定所要時間: 1時間</span>
-                </div>
-                <div class="card-content">
-                    <h3>GitHubの基本操作</h3>
-                    <p>GitHubアカウントの作成からGitHub Desktopの使い方まで、バージョン管理の基礎を学ぶチュートリアル</p>
-                    <ul class="feature-list">
-                        <li>GitHubアカウントの作成</li>
-                        <li>GitHub Desktopのインストール</li>
-                        <li>基本的なGit操作</li>
-                    </ul>
-                    <a href="tutorial/github.html" class="tutorial-btn">開始する</a>
-                </div>
-            </div>
-
-            <!-- Git/GitHub注意点 -->
-            <div class="tutorial-card">
-                <div class="card-header github-advanced">
-                    <h2>Git/GitHub注意点</h2>
-                    <span class="time-badge">推定所要時間: 1時間</span>
-                </div>
-                <div class="card-content">
-                    <h3>GitHubを使う上での注意点</h3>
-                    <p>GitHubを使用する際の重要な注意点とベストプラクティスを学ぶガイド</p>
-                    <ul class="feature-list">
-                        <li>コミットメッセージの書き方</li>
-                        <li>アップロード時の注意点</li>
-                        <li>トラブル防止のポイント</li>
-                    </ul>
-                    <a href="tutorial/github-advanced.html" class="tutorial-btn">開始する</a>
-                </div>
-            </div>
+        <!-- 応用編 -->
+        <div class="tutorial-card">
+          <div class="card-header application">
+            <h2>応用</h2>
+            <span class="time-badge">推定所要時間: 10時間</span>
+          </div>
+          <div class="card-content">
+            <h3>横スクロールアクション</h3>
+            <p>
+              プロフェッショナルなゲーム開発手法を学ぶ、総合的なチュートリアル
+            </p>
+            <ul class="feature-list">
+              <li>アニメーションシステム</li>
+              <li>Tilemap活用</li>
+              <li>敵AIの実装</li>
+            </ul>
+            <a href="tutorial/application.html" class="tutorial-btn"
+              >開始する</a
+            >
+          </div>
         </div>
+      </div>
+
+      <h1 class="web-section">Web開発チュートリアル</h1>
+      <p class="subtitle">HTML, CSS, JavaScriptを使ったWebサイト制作の基礎</p>
+
+      <!-- Web開発チュートリアルのカード -->
+      <div class="tutorial-grid">
+        <!-- HTML編 -->
+        <div class="tutorial-card">
+          <div class="card-header beginner">
+            <h2>HTML編</h2>
+            <span class="time-badge">推定所要時間: 2時間</span>
+          </div>
+          <div class="card-content">
+            <h3>Webサイトの基礎</h3>
+            <p>
+              HTMLの基本的な構造とタグの使い方を学び、シンプルなWebページを作成するチュートリアル
+            </p>
+            <ul class="feature-list">
+              <li>HTMLの基本構造</li>
+              <li>主要なタグの使い方</li>
+              <li>フォーム要素の実装</li>
+            </ul>
+            <a href="tutorial/html.html" class="tutorial-btn">開始する</a>
+          </div>
+        </div>
+
+        <!-- CSS編 -->
+        <div class="tutorial-card">
+          <div class="card-header intermediate">
+            <h2>CSS編</h2>
+            <span class="time-badge">推定所要時間: 3時間</span>
+          </div>
+          <div class="card-content">
+            <h3>スタイリングの基本</h3>
+            <p>
+              CSSを使ってWebページをデザインし、レスポンシブなレイアウトを作成するチュートリアル
+            </p>
+            <ul class="feature-list">
+              <li>CSSセレクタとプロパティ</li>
+              <li>Flexboxとグリッドレイアウト</li>
+              <li>レスポンシブデザイン</li>
+            </ul>
+            <a href="tutorial/css.html" class="tutorial-btn">開始する</a>
+          </div>
+        </div>
+
+        <!-- JavaScript編 -->
+        <div class="tutorial-card">
+          <div class="card-header advanced">
+            <h2>JavaScript編</h2>
+            <span class="time-badge">推定所要時間: 4時間</span>
+          </div>
+          <div class="card-content">
+            <h3>インタラクティブな機能実装</h3>
+            <p>
+              JavaScriptを使って動的な機能を実装し、ユーザー体験を向上させるチュートリアル
+            </p>
+            <ul class="feature-list">
+              <li>DOM操作の基本</li>
+              <li>イベントハンドリング</li>
+              <li>アニメーション実装</li>
+            </ul>
+            <a href="tutorial/javascript.html" class="tutorial-btn">開始する</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GitHub開発チュートリアルのカード -->
+      <h1 class="github-section">GitHub入門</h1>
+      <p class="subtitle">バージョン管理とチーム開発の基礎</p>
+
+      <div class="tutorial-grid">
+        <!-- GitHub Desktop編 -->
+        <div class="tutorial-card">
+          <div class="card-header github">
+            <h2>GitHub Desktop</h2>
+            <span class="time-badge">推定所要時間: 1時間</span>
+          </div>
+          <div class="card-content">
+            <h3>GitHubの基本操作</h3>
+            <p>
+              GitHubアカウントの作成からGitHub
+              Desktopの使い方まで、バージョン管理の基礎を学ぶチュートリアル
+            </p>
+            <ul class="feature-list">
+              <li>GitHubアカウントの作成</li>
+              <li>GitHub Desktopのインストール</li>
+              <li>基本的なGit操作</li>
+            </ul>
+            <a href="tutorial/github.html" class="tutorial-btn">開始する</a>
+          </div>
+        </div>
+
+        <!-- Git/GitHub注意点 -->
+        <div class="tutorial-card">
+          <div class="card-header github-advanced">
+            <h2>Git/GitHub注意点</h2>
+            <span class="time-badge">推定所要時間: 1時間</span>
+          </div>
+          <div class="card-content">
+            <h3>GitHubを使う上での注意点</h3>
+            <p>
+              GitHubを使用する際の重要な注意点とベストプラクティスを学ぶガイド
+            </p>
+            <ul class="feature-list">
+              <li>コミットメッセージの書き方</li>
+              <li>アップロード時の注意点</li>
+              <li>トラブル防止のポイント</li>
+            </ul>
+            <a href="tutorial/github-advanced.html" class="tutorial-btn"
+              >開始する</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- フッター -->
     <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>おもちゃプロジェクト チュートリアル</h3>
-                <p>プログラミング未経験者、Unityの操作が分からない人向けゲーム開発を楽しむための知識をつけるサイト</p>
-            </div>
-            <div class="footer-section">
-                <h3>リンク</h3>
-                <ul>
-                    <li><a href="https://unity.com/ja">Unity公式サイト</a></li>
-                    <li><a href="https://docs.unity3d.com/ja/">Unity マニュアル</a></li>
-                    <li><a href="https://forum.unity.com/">Unity フォーラム</a></li>
-                    <li><a href="#contact" class="contact-btn">お問い合わせ</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>お問い合わせ</h3>
-                <ul>
-                    <li><i class="fas fa-envelope"></i> おもちゃの公式サイト.com</li>
-                    <li><i class="fas fa-envelope"></i> Unity担当:c1223839@st.kanazawa-it.ac.jp</li>
-                    <li><i class="fas fa-envelope"></i> Web担当:c1254563@st.kanazawa-it.ac.jp</li>
-                </ul>
-            </div>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>おもちゃプロジェクト チュートリアル</h3>
+          <p>
+            プログラミング未経験者、Unityの操作が分からない人向けゲーム開発を楽しむための知識をつけるサイト
+          </p>
         </div>
+        <div class="footer-section">
+          <h3>リンク</h3>
+          <ul>
+            <li><a href="https://unity.com/ja">Unity公式サイト</a></li>
+            <li><a href="https://docs.unity3d.com/ja/">Unity マニュアル</a></li>
+            <li><a href="https://forum.unity.com/">Unity フォーラム</a></li>
+            <li><a href="#contact" class="contact-btn">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>お問い合わせ</h3>
+          <ul>
+            <li><i class="fas fa-envelope"></i> おもちゃの公式サイト.com</li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              Unity担当:c1223839@st.kanazawa-it.ac.jp
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              Web担当:c1254563@st.kanazawa-it.ac.jp
+            </li>
+          </ul>
+        </div>
+      </div>
 
-        <div class="footer-bottom">
-            <p>&copy; 2024 おもちゃプロジェクト</p>
-        </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 おもちゃプロジェクト</p>
+      </div>
     </footer>
 
     <!-- モーダルを追加 -->
     <div id="about-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>おもちゃプロジェクトについて</h2>
-            <div class="about-grid">
-                <div class="about-section">
-                    <i class="fas fa-rocket"></i>
-                    <h3>プロジェクトの目的</h3>
-                    <p>子供の成長を見守るおもちゃプロジェクトでは、教育的なおもちゃやゲームを制作することを目的としています。</p>
-                </div>
-                <div class="about-section">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>学習方法と目標</h3>
-                    <p>Unityの操作方法やコーディングを体系的に4つのレベルに応じて解説しています。何も見ずに自力で全て書ける必要はありません。色々調べたりAI使ったりしながら、自分の理想に近い作品を作れるようになるのが目標です。</p>
-                </div>
-                <div class="about-section">
-                    <i class="fas fa-users"></i>
-                    <h3>対象者</h3>
-                    <p>初めてのプログラミングする人～プログラミング初心者向けの資料になっています。既にUnityをある程度触れる人、プログラミングに自信がある人には少し難易度が低いかもしれません。</p>
-                </div>
-                <div class="about-section">
-                    <i class="fas fa-code"></i>
-                    <h3>開発環境</h3>
-                    <p>ゲームはUnity(C#), VisualStudio、WebはHTML, CSS, JavaScript, VisualStudioCode、ハードコーディングはPython, Arduinoで開発しています。</p>
-                </div>
-            </div>
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>おもちゃプロジェクトについて</h2>
+        <div class="about-grid">
+          <div class="about-section">
+            <i class="fas fa-rocket"></i>
+            <h3>プロジェクトの目的</h3>
+            <p>
+              子供の成長を見守るおもちゃプロジェクトでは、教育的なおもちゃやゲームを制作することを目的としています。
+            </p>
+          </div>
+          <div class="about-section">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>学習方法と目標</h3>
+            <p>
+              Unityの操作方法やコーディングを体系的に4つのレベルに応じて解説しています。何も見ずに自力で全て書ける必要はありません。色々調べたりAI使ったりしながら、自分の理想に近い作品を作れるようになるのが目標です。
+            </p>
+          </div>
+          <div class="about-section">
+            <i class="fas fa-users"></i>
+            <h3>対象者</h3>
+            <p>
+              初めてのプログラミングする人～プログラミング初心者向けの資料になっています。既にUnityをある程度触れる人、プログラミングに自信がある人には少し難易度が低いかもしれません。
+            </p>
+          </div>
+          <div class="about-section">
+            <i class="fas fa-code"></i>
+            <h3>開発環境</h3>
+            <p>
+              ゲームはUnity(C#), VisualStudio、WebはHTML, CSS, JavaScript,
+              VisualStudioCode、ハードコーディングはPython,
+              Arduinoで開発しています。
+            </p>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- お問い合わせモーダルを追加 -->
     <div id="contact-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>お問い合わせ</h2>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe22q_TcaBH86Xy1_ufMOaDK9_fZG4bgis0wnRReKQign0maw/viewform?embedded=true" 
-                    width="100%" 
-                    height="500px" 
-                    frameborder="0" 
-                    marginheight="0" 
-                    marginwidth="0">
-                読み込んでいます...
-            </iframe>
-        </div>
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>お問い合わせ</h2>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSe22q_TcaBH86Xy1_ufMOaDK9_fZG4bgis0wnRReKQign0maw/viewform?embedded=true"
+          width="100%"
+          height="500px"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+        >
+          読み込んでいます...
+        </iframe>
+      </div>
     </div>
 
     <!-- スクロールトップボタン -->
     <a href="#" class="scroll-to-top">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </a>
 
     <!-- Font Awesome と modal.js の追加 -->
-    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/YOUR_KIT_CODE.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/modal.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/background-fade.js"></script>
-</body>
+  </body>
 </html>
