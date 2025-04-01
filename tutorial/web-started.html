@@ -17,24 +17,39 @@
             <h2>1. Visual Studio Codeのインストール</h2>
             <p>Web開発で使用するコードエディタをインストールします。</p>
             <ul class="setup-steps">
-                <li>Visual Studio Code公式サイトにアクセス（<a href="https://code.visualstudio.com/" target="_blank">ダウンロードページ</a>）</li>
-                <li>Windows用インストーラーをダウンロード</li>
+                <li>Visual Studio Code公式サイトにアクセス（<a href="https://code.visualstudio.com/download" target="_blank">ダウンロードページ</a>）</li>
+                <image src="../image/56.png" alt="ダウンロードページの画像"></image>
+                <p>&emsp;自分のPCのOSにあったものをダウンロードしてください(ほとんどの人はWindowsだと思います)</p><br />
                 <li>ダウンロードしたインストーラーを実行</li>
-                <li>インストール完了後、Visual Studio Codeを起動</li>
+                <image src="../image/57.png" alt="インストーラーの画面1"></image>
+                <p>&emsp;同意をするをクリック→次へをクリック</p><br />
+                <image src="../image/58.png" alt="インストーラーの画面2"></image>
+                <p>&emsp;次へをクリック(保存先にこだわりがある場合はこのタイミングで指定してください)</p><br />
+                <image src="../image/59.png" alt="インストーラーの画面3"></image>
+                <p>&emsp;次へをクリック</p><br />
+                <image src="../image/60.png" alt="インストーラーの画面4"></image>
+                <p>&emsp;デスクトップ上にアイコンを作成するをクリックして次へをクリック</p><br />
+                <image src="../image/61.png" alt="インストーラーの画面5"></image>
+                <p>&emsp;インストールをクリック</p><br />
+                <image src="../image/62.png" alt="インストーラーの画面6"></image>
+                <p>&emsp;完了をクリック</p><br />
+                <p>これでインストールは完了です。ここからは拡張機能を入れてVisualStudioCodeに追加で機能を加えていきます。</p>
             </ul>
         </section>
 
         <section>
             <h2>2. 日本語化と拡張機能のインストール</h2>
-            <p>Visual Studio Codeを使いやすくするための設定を行います。</p>
             <ul class="setup-steps">
                 <li>左側のExtensionsアイコンをクリック（または Ctrl+Shift+X）</li>
-                <li>検索バーで「Japanese」と入力し、「Japanese Language Pack」をインストール</li>
+                <image src="../image/63.png" alt="拡張機能の位置"></image>
+                <li>検索バーで「Japanese」と入力し、「Japanese Language Pack」をインストール(Microsoftがリリースしているものをインストールしてください)</li>
+                <image src="../image/64.png" alt="日本語化の拡張機能"></image>
                 <li>Visual Studio Codeを再起動して日本語化を適用</li>
+                <image src="../image/65.png" alt="再起動"></image>
                 <li>同様に以下の拡張機能をインストール：
                     <ul>
-                        • Live Server（HTMLファイルをブラウザで確認）</li><br />
-                        • Auto Rename Tag（HTMLタグの編集補助）</li><br />
+                        • Live Server（HTMLファイルをブラウザで確認できる機能）</li><br />
+                        • Auto Rename Tag（HTMLタグを自動で補完してくれる機能）</li><br />
                         • HTML CSS Support（HTMLとCSSの入力補完）</li><br />
                     </ul>
                 </li>
@@ -47,6 +62,8 @@
             <ul class="setup-steps">
                 <li>デスクトップなど分かりやすい場所に新しいフォルダを作成</li>
                 <li>Visual Studio Codeを開き、「ファイル」→「フォルダを開く」で作成したフォルダを選択</li>
+                <image src="../image/66.png" alt="フォルダを開くの位置"></image>
+                <image src="../image/67.png" alt="フォルダを選択"></image>
                 <li>以下のような構成でフォルダとファイルを作成：
                     <pre><code>project/
 ├── index.html
@@ -55,17 +72,47 @@
 ├── js/
 │   └── main.js
 └── images/</code></pre>
+                <image src="../image/68.png" alt="フォルダ構成"></image>
+                <p>&emsp;上の画像のようになればOKです</p>
                 </li>
             </ul>
         </section>
 
         <section>
             <h2>4. 動作確認</h2>
-            <p>環境が正しく構築できているか確認します。</p>
+            <p>環境が正しく構築できているか確認します。試しに文字を表示してみましょう！</p>
             <ul class="setup-steps">
                 <li>index.htmlに基本的なHTMLを記述</li>
-                <li>Live Serverを起動（右クリック→「Live Serverで開く」）</li>
-                <li>ブラウザが起動し、作成したページが表示されることを確認</li>
+<div class="code-block">
+    <button class="copy-btn" onclick="copyCode(this)">コピー</button>
+    <pre><code data-code="&lt;!DOCTYPE html&gt;
+&lt;html lang='ja'&gt;
+  &lt;head&gt;
+    &lt;meta charset='UTF-8' /&gt;
+    &lt;meta name='viewport' content='width=device-width, initial-scale=1.0' /&gt;
+    &lt;title&gt;環境構築テスト&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;a&gt;Hello, World!&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;">
+<span class="line-numbers">1</span>&lt;!DOCTYPE html&gt;
+<span class="line-numbers">2</span>&lt;html lang="ja"&gt;
+<span class="line-numbers">3</span>  &lt;head&gt;
+<span class="line-numbers">4</span>    &lt;meta charset="UTF-8" /&gt;
+<span class="line-numbers">5</span>    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+<span class="line-numbers">6</span>    &lt;title&gt;環境構築テスト&lt;/title&gt;
+<span class="line-numbers">7</span>  &lt;/head&gt;
+<span class="line-numbers">8</span>  &lt;body&gt;
+<span class="line-numbers">9</span>    &lt;a&gt;Hello, World!&lt;/a&gt;
+<span class="line-numbers">10</span>  &lt;/body&gt;
+<span class="line-numbers">11</span>&lt;/html&gt;
+</code></pre>
+</div>
+                <li>Live Serverを起動</li>
+                <image src="../image/69.png" alt="Live Serverの起動"></image>
+                <p>&emsp;右下の「Go Live」をクリック</p><br />
+                <li>ブラウザが自動で起動し文字だけのページが表示されたら環境構築は成功です！</li>
             </ul>
         </section>
     </div>
@@ -75,5 +122,6 @@
     </a>
 
     <script src="../js/scroll.js"></script>
+    <script src="../js/codeBlock.js"></script>
 </body>
-</html> 
+</html>

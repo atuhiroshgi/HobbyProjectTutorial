@@ -1,69 +1,121 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unityチュートリアル</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/tutorial.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/tutorial.css" />
+  </head>
+  <body>
     <a href="../index.html" class="back-btn">戻る</a>
     <div class="tutorial-content">
-        <h1>Unity中級チュートリアル - ボール転がし</h1>
-        <section>
-            <h2>1. 3Dオブジェクトの基礎</h2><br />
+      <h1>Unity中級チュートリアル - ボール転がし</h1>
+      <section>
+        <h2>1. 3Dのエディタ操作</h2>
+        <br />
 
-            <img src="../image/49.png" alt="3Dプロジェクトの作成">
-            <p>Universal3Dを選択して、名前はRoll-a-Ballとしてください。保存場所はお好みで大丈夫です。</p><br />
+        <img src="../image/49.png" alt="3Dプロジェクトの作成" />
+        <p>
+          Universal3Dを選択して、名前はRoll-a-Ballとしてください。保存場所はお好みで大丈夫です。
+        </p>
+        <br />
 
-            <img src="../image/50.png" alt="フォルダの作成">
-            <p>プロジェクトが作れたらAssetsフォルダの下にScriptsフォルダとMaterialsフォルダを作成します。</p><br />
+        <img src="../image/50.png" alt="フォルダの作成" />
+        <p>
+          プロジェクトが作れたらAssetsフォルダの下にScriptsフォルダとMaterialsフォルダを作成します。
+        </p>
+        <br />
 
-            <p>さて、初級では出てこなかったシーンビューでの操作がでてきます。普段PCでゲームをする人は簡単かもしれませんが、初めての人は少し戸惑うかもしれません。</p>
-            <img src="../image/51.png" alt="シーンビューの操作">
-            <p>シーンビューでの操作方法：</p>
+        <p>
+          さて、初級では出てこなかったシーンビューでの操作がでてきます。普段PCでゲームをする人は簡単かもしれませんが、初めての人は少し戸惑うかもしれません。
+        </p>
+        <img src="../image/51.png" alt="シーンビューの操作" />
+        <p>シーンビューでの操作方法：</p>
+        <ul>
+          <li>
+            <strong>視点の回転：</strong> 右クリックを押しながらマウスをドラッグ
+          </li>
+          <li>
+            <strong>視点の軌道回転：</strong>
+            Altキーを押しながらマウスの左ボタンでドラッグ（選択したオブジェクトを中心に回り込む）
+          </li>
+          <li>
+            <strong>2D的な移動：</strong>
+            マウスホイールを押しながらドラッグで上下左右に移動
+          </li>
+          <li>
+            <strong>3D空間での移動（右クリックを押しながら）：</strong>
             <ul>
-                <li><strong>視点の回転：</strong> 右クリックを押しながらマウスをドラッグ</li>
-                <li><strong>視点の軌道回転：</strong> Altキーを押しながらマウスの左ボタンでドラッグ（選択したオブジェクトを中心に回り込む）</li>
-                <li><strong>2D的な移動：</strong> マウスホイールを押しながらドラッグで上下左右に移動</li>
-                <li><strong>3D空間での移動（右クリックを押しながら）：</strong>
-                    <ul>
-                        <li>W - 前方向に移動</li>
-                        <li>S - 後ろ方向に移動</li>
-                        <li>A - 左方向に移動</li>
-                        <li>D - 右方向に移動</li>
-                        <li>E - 上方向に移動</li>
-                        <li>Q - 下方向に移動</li>
-                    </ul>
-                </li>
+              <li>W - 前方向に移動</li>
+              <li>S - 後ろ方向に移動</li>
+              <li>A - 左方向に移動</li>
+              <li>D - 右方向に移動</li>
+              <li>E - 上方向に移動</li>
+              <li>Q - 下方向に移動</li>
             </ul>
-            <p>これらの操作を覚えるとシーンビューでの操作が楽になります。3Dでゲームを作るなら必須の操作になるので直感的に操作できるようになるまで慣らしていきましょう</p><br />
+          </li>
+        </ul>
+        <p>
+          これらの操作を覚えるとシーンビューでの操作が楽になります。3Dでゲームを作るなら必須の操作になるので直感的に操作できるようになるまで慣らしていきましょう
+        </p>
+        <br />
 
-            <p>配置などの操作は2Dのときと同じなので省略します。こんな感じのCubeを配置してください。座標やスケールを画像の通りにしておくと作るのが楽になるかもしれません。</p>
-            <img src="../image/52.png" alt="Cubeの配置">
-            <p>配置したら、名前はFloorとしてください。これが床になります。</p>
-            <img src="../image/53.png" alt="名前をFloorに変更">
-        </section>
-        <section>
-            <h2>2. 物理演算の基礎</h2>
-            <p>Rigidbodyコンポーネントと重力、衝突判定について学びます。</p>
-        </section>
-        <section>
-            <h2>3. キー入力による移動</h2>
-            <p>キーボード入力でボールを操作する方法を学びます。</p>
-        </section>
-        <section>
-            <h2>4. カメラワーク</h2>
-            <p>ボールを追従するカメラの設定方法を学びます。</p>
-        </section>
+        <p>
+          配置などの操作は2Dのときと同じなので省略します。画像のようにCubeを配置してください。座標やサイズを画像の通りにしておくと作るのが楽になるかもしれません。
+        </p>
+        <img src="../image/52.png" alt="Cubeの配置" />
+        <p>配置したら、名前はFloorとしてください。これが床になります。</p>
+        <img src="../image/53.png" alt="名前をFloorに変更" />
+        <br />
+
+        <p>
+          次に、プレイヤーが操作する玉を配置します。先ほど配置したCubeの真ん中にSphereを配置しましょう。
+        </p>
+        <img src="../image/54.png" alt="玉の配置" />
+        <p>名前はPlayerとしてください。</p>
+        <br />
+
+        <p>
+          現状プレイヤーにはSphere Colliderというコンポーネントが付いています。これは初級編で説明したように、当たり判定を付けるものです。<br />
+          そして、冒頭の動画のように
+          <ul>
+            <li>地面に沿って動く</li>
+            <li>重力によって落ちる</li>
+            <li>慣性を付けたい</li>
+          </ul>
+          などの物理的な動きをしてほしいときは
+          <span id="highlight-red">Rigidbody</span>というコンポーネントが必要です。><br /><br />
+          さっそくアタッチしてみましょう。
+        </p>
+        <img src="../image/55.png" alt="Rigidbodyのアタッチ" />
+        <p>
+          これで、Playerが物理的な動きをするようになりました。
+        </p>
+      </section>
+
+      <section>
+        <h2>2. 物理演算の基礎</h2>
+        <p>Rigidbodyコンポーネントと重力、衝突判定について学びます。</p>
+      </section>
+      <section>
+        <h2>3. キー入力による移動</h2>
+        <p>キーボード入力でボールを操作する方法を学びます。</p>
+      </section>
+      <section>
+        <h2>4. カメラワーク</h2>
+        <p>ボールを追従するカメラの設定方法を学びます。</p>
+      </section>
     </div>
 
     <a href="#" class="scroll-to-top">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </a>
 
     <script src="../js/scroll.js"></script>
-</body>
-</html> 
+  </body>
+</html>
