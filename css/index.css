@@ -230,10 +230,11 @@
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px; /* パディングを調整 */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* 左右に要素を分ける */
     align-items: center;
+    box-sizing: border-box; /* ボックスサイズを調整 */
 }
 
 .logo {
@@ -242,6 +243,7 @@
     color: #ffffff;
     font-size: 1.3em;
     font-weight: bold;
+    margin-left: 20px; /* 左に余白を追加 */
 }
 
 .logo i {
@@ -257,10 +259,14 @@
     letter-spacing: 0.5px;
 }
 
+.main-nav {
+    margin-right: 20px; /* 右に余白を追加 */
+}
+
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 20px; /* ギャップを調整 */
     margin: 0;
     padding: 0;
 }
@@ -741,4 +747,4 @@
     opacity: 0;
     transition: opacity 0.3s ease;
     object-fit: contain;
-} 
+}
