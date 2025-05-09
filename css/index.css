@@ -230,11 +230,11 @@
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 10px; /* パディングを調整 */
+    padding: 0 50px; /* 左右の余白をさらに増やす */
     display: flex;
     justify-content: space-between; /* 左右に要素を分ける */
     align-items: center;
-    box-sizing: border-box; /* ボックスサイズを調整 */
+    box-sizing: border-box;
 }
 
 .logo {
@@ -260,7 +260,49 @@
 }
 
 .main-nav {
-    margin-right: 20px; /* 右に余白を追加 */
+    display: flex; /* デフォルトで表示 */
+    flex-direction: row; /* 大きい画面では横並び */
+    background: none;
+    position: static;
+    width: auto;
+    padding: 0; /* 余計な右側の余白を削除 */
+    margin-right: 0; /* 右側の余白を削除 */
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none; /* 小さい画面では非表示 */
+        flex-direction: column; /* 縦並びに変更 */
+        background: #222;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .main-nav.active {
+        display: flex; /* ハンバーガーメニューで表示 */
+    }
+}
+
+.menu-toggle {
+    display: none; /* デフォルトでは非表示 */
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* 小さい画面で表示 */
+    }
+
+    .main-nav {
+        display: none; /* モバイルでは非表示 */
+    }
 }
 
 .main-nav ul {
@@ -712,7 +754,6 @@
     }
 
     .overview-content h2 {
-        font-size: 1.8em;
     }
 
     .development-areas {
